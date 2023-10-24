@@ -1,6 +1,13 @@
-### Could Do
+# МАГИЯ ОТ ДЪРВО
 
-- [ ] Make repo public
+## Авторски дърворезби и еко изделия от Диди Георгиева
+
+[magiaotdarvo.com](https://magiaotdarvo.com/)
+
+# Features
+
+TBD!
+
 - [ ] Add the ability to change the cover photo
 - [ ] Incorporate this https://maximorlov.com/linting-rules-for-asynchronous-code-in-javascript/
 - [ ] Tryout https://fontawesome.com/
