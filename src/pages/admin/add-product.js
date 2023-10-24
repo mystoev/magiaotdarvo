@@ -1,26 +1,29 @@
-import React, { useState } from 'react';
+import React, { useReducer } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 
 import Upload from '../../components/upload';
 import { useAddData } from '../../hooks/use-update-data';
 import { CATEGORIES_MAP } from '../../constants/data';
+import { addProductReducer } from './reducers';
+import { NAME_CHANGE, DESCRIPTION_CHANGE, IMAGES_CHANGE } from './constants';
 import './edit-product.less';
 
 const AddProduct = () => {
   const navigate = useNavigate();
-
   const { category } = useParams();
 
-  const [name, setName] = useState('');
-  const [description, setDescription] = useState('');
-  const [images, setImages] = useState([]);
+  const [state, dispatch] = useReducer(addProductReducer, {
+    name: '',
+    description: '',
+    images: []
+  });
 
   const handleSave = async () => {
     await useAddData({
       category,
-      newProductName: name,
-      description,
-      images
+      newProductName: state.name,
+      description: state.description,
+      images: state.images
     });
 
     navigate('/admin');
@@ -30,15 +33,23 @@ const AddProduct = () => {
     <div className="edit-container">
       <h1>Добавяне в категория: {CATEGORIES_MAP[category]}</h1>
       <h2>Заглавие</h2>
-      <input type="text" value={name} onChange={({ target: { value } }) => setName(value)} />
+      <input
+        type="text"
+        value={state.name}
+        onChange={({ target: { value } }) => dispatch({ type: NAME_CHANGE, payload: value })}
+      />
       <h2>Описание</h2>
-      <textarea value={description} onChange={({ target: { value } }) => setDescription(value)}>
-        {description}
+      <textarea
+        value={state.description}
+        onChange={({ target: { value } }) =>
+          dispatch({ type: DESCRIPTION_CHANGE, payload: value })
+        }>
+        {state.description}
       </textarea>
       <br />
       <h2>Нови снимки</h2>
-      <Upload onUpload={(files) => setImages(files)} />
-      <button className="button-default" onClick={() => handleSave()}>
+      <Upload onUpload={(files) => dispatch({ type: IMAGES_CHANGE, payload: files })} />
+      <button className="button-default" onClick={handleSave}>
         Запази промените
       </button>
     </div>
