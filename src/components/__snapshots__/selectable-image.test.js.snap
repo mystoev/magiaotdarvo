@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SelectableImage /> tests should render 1`] = `
+<div>
+  <div
+    class="selectable-image-container"
+  >
+    <div
+      class="selectable-image-overlay normal"
+    />
+    <img
+      class="selectable-image"
+      src=""
+    />
+  </div>
+</div>
+`;
+
+exports[`<SelectableImage /> tests should render with image 1`] = `
+<div>
+  <div
+    class="selectable-image-container"
+  >
+    <div
+      class="selectable-image-overlay normal"
+    />
+    <img
+      class="selectable-image"
+      src="http://localhost:8080/images/cat1/name1/file1"
+    />
+  </div>
+</div>
+`;

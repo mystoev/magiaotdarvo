@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`category page should render 1`] = `
+<div>
+  <div>
+     
+  </div>
+  <div
+    class="products-list"
+  >
+    <div
+      class="category-link"
+    >
+      <a
+        href="/product/test-product/test-folder"
+      >
+        <div
+          class="product-image-container"
+        >
+          <img
+            class="image-cover"
+            src=""
+          />
+          <img
+            src=""
+          />
+        </div>
+        <div
+          class="product-title-container"
+        >
+          <div
+            class="accent-bar slim"
+          />
+          <p
+            class="product-title"
+          >
+            test-name
+          </p>
+          <div
+            class="accent-bar slim"
+          />
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
+`;

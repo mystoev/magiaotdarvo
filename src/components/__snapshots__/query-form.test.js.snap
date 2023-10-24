@@ -1,0 +1,110 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<QueryForm /> should render 1`] = `
+<div>
+  <div
+    class="query-form"
+  >
+    <p>
+      Изпрати запитване, като попълниш формата по-долу, след което ще получиш обаждане за детайли. Или директно се обади на телефон 0890932001.
+    </p>
+    <fieldset>
+      <label>
+        Име
+      </label>
+      <input
+        alt="name-field"
+        type="text"
+        value=""
+      />
+    </fieldset>
+    <fieldset>
+      <label>
+        Вашият имейл
+      </label>
+      <input
+        alt="email-field"
+        type="text"
+        value=""
+      />
+    </fieldset>
+    <fieldset>
+      <label>
+        Телефон за контакт
+      </label>
+      <input
+        alt="phone-field"
+        type="text"
+        value=""
+      />
+    </fieldset>
+    <fieldset>
+      <label>
+        Съобщение
+      </label>
+      <textarea
+        alt="message-field"
+      />
+    </fieldset>
+    <button
+      class="button-default"
+      disabled=""
+    >
+      Изпрати
+    </button>
+  </div>
+</div>
+`;
+
+exports[`<QueryForm /> should render as slim 1`] = `
+<div>
+  <div
+    class="query-form-slim"
+  >
+    <fieldset>
+      <label>
+        Име
+      </label>
+      <input
+        alt="name-field"
+        type="text"
+        value=""
+      />
+    </fieldset>
+    <fieldset>
+      <label>
+        Вашият имейл
+      </label>
+      <input
+        alt="email-field"
+        type="text"
+        value=""
+      />
+    </fieldset>
+    <fieldset>
+      <label>
+        Телефон за контакт
+      </label>
+      <input
+        alt="phone-field"
+        type="text"
+        value=""
+      />
+    </fieldset>
+    <fieldset>
+      <label>
+        Съобщение
+      </label>
+      <textarea
+        alt="message-field"
+      />
+    </fieldset>
+    <button
+      class="button-default"
+      disabled=""
+    >
+      Изпрати
+    </button>
+  </div>
+</div>
+`;

@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<HeaderMenu /> should render 1`] = `
+<div>
+  <div
+    class="header-menu-small"
+  >
+    <svg
+      class="menu-icon"
+    />
+  </div>
+  <ul
+    class="header-menu"
+  />
+</div>
+`;
+
+exports[`<HeaderMenu /> should render with links 1`] = `
+<div>
+  <div
+    class="header-menu-small"
+  >
+    <svg
+      class="menu-icon"
+    />
+  </div>
+  <ul
+    class="header-menu"
+  >
+    <li>
+      <a
+        href="/path1"
+      >
+        LINK1
+      </a>
+    </li>
+    <li>
+      <a
+        href="/path2"
+      >
+        LINK2
+      </a>
+    </li>
+  </ul>
+</div>
+`;

@@ -1,0 +1,10 @@
+export { default as Root } from './root';
+export { default as Home } from './home';
+export { default as Products } from './products';
+export { default as Product } from './product';
+export { default as CategoryPage } from './category';
+export { default as Query } from './query';
+export { default as About } from './about';
+export { default as Contacts } from './contacts';
+export { default as Error } from './error';
+export { default as EmailSent } from './email-sent';

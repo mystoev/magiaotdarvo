@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "title": "Бижута",
+    "description": "Обеци, колиета, украшение",
+    "folder": "jewery"
+  },
+  {
+    "id": 2,
+    "title": "Еко изделия",
+    "description": "Гривни, мартеници, макраме",
+    "folder": "eco"
+  },
+  {
+    "id": 3,
+    "title": "За децата",
+    "description": "Изграчки, пъзели, поставки",
+    "folder": "kids"
+  },
+  {
+    "id": 4,
+    "title": "Икони и кръстове",
+    "description": "За стена или настолни",
+    "folder": "icons"
+  },
+  {
+    "id": 5,
+    "title": "Книги и тефтери",
+    "description": "Албуми, рецепти, ритуали",
+    "folder": "books"
+  },
+  {
+    "id": 6,
+    "title": "Пана",
+    "description": "Фигури, арт инсталации",
+    "folder": "art"
+  },
+  {
+    "id": 7,
+    "title": "Свещници",
+    "description": "Единични, в чаша, тематични",
+    "folder": "candles"
+  },
+  {
+    "id": 8,
+    "title": "Табели",
+    "description": "За къщи, стайни",
+    "folder": "signs"
+  },
+  {
+    "id": 9,
+    "title": "Кутии",
+    "description": "За бижута, карти, подаръчни",
+    "folder": "boxes"
+  },
+  {
+    "id": 10,
+    "title": "Ключодържатели",
+    "description": "Стенни, с бележки",
+    "folder": "keyholders"
+  },
+  {
+    "id": 11,
+    "title": "Рамки за снимки",
+    "description": "За стена или настолни",
+    "folder": "photoframes"
+  },
+  {
+    "id": 12,
+    "title": "Други",
+    "description": "Родословни дървета, дъски за рязане",
+    "folder": "other"
+  }
+]
