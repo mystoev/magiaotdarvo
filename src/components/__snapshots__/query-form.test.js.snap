@@ -3,7 +3,7 @@
 exports[`<QueryForm /> should render 1`] = `
 <div>
   <div
-    class="query-form"
+    class="query-form__QueryFormDefault-sc-5ca061-0 jdMxmZ"
   >
     <p>
       Изпрати запитване, като попълниш формата по-долу, след което ще получиш обаждане за детайли. Или директно се обади на телефон 0890932001.
@@ -59,7 +59,7 @@ exports[`<QueryForm /> should render 1`] = `
 exports[`<QueryForm /> should render as slim 1`] = `
 <div>
   <div
-    class="query-form-slim"
+    class="query-form__QueryFormSlim-sc-5ca061-1 bSSgJm"
   >
     <fieldset>
       <label>

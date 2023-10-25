@@ -15,17 +15,17 @@ describe('<PageHeader />', () => {
     expect(container).toMatchInlineSnapshot(`
       <div>
         <div
-          class="accent-bar normal"
+          class="accent-bar__AccentBarNormal-sc-1nm9o64-1 cbYeWr"
         />
         <div
-          class="header-titles"
+          class="page-header__HeaderTitles-sc-1ejvrf1-0 gErLqz"
         >
           <h1>
             ХЕДЪР
           </h1>
         </div>
         <div
-          class="accent-bar normal"
+          class="accent-bar__AccentBarNormal-sc-1nm9o64-1 cbYeWr"
         />
       </div>
     `);
@@ -41,10 +41,10 @@ describe('<PageHeader />', () => {
     expect(container).toMatchInlineSnapshot(`
       <div>
         <div
-          class="accent-bar normal"
+          class="accent-bar__AccentBarNormal-sc-1nm9o64-1 cbYeWr"
         />
         <div
-          class="header-titles"
+          class="page-header__HeaderTitles-sc-1ejvrf1-0 gErLqz"
         >
           <a
             href="/home"
@@ -55,7 +55,7 @@ describe('<PageHeader />', () => {
           </a>
         </div>
         <div
-          class="accent-bar normal"
+          class="accent-bar__AccentBarNormal-sc-1nm9o64-1 cbYeWr"
         />
       </div>
     `);

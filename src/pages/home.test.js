@@ -24,7 +24,7 @@ describe('home page', () => {
           Авторски дърворезби и еко изделия от Диди Георгиева
         </div>
         <div
-          class="section-image-container"
+          class="image-section__ImageContainer-sc-1qjyve1-0 jmhPHN"
         >
           <img
             src="[object Object]"

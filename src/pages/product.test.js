@@ -45,7 +45,7 @@ describe('product page', () => {
             test-name
           </div>
           <div
-            class="product-details-container"
+            class="product__ProductDetailsContaier-sc-1tg8ziu-0 grnzyi"
           >
             <div>
               ImageGallery
@@ -111,7 +111,7 @@ describe('product page', () => {
             test-name
           </div>
           <div
-            class="product-details-container"
+            class="product__ProductDetailsContaier-sc-1tg8ziu-0 grnzyi"
           >
             <div>
               ImageGallery

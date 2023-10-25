@@ -9,7 +9,7 @@ describe('<AccentBar />', () => {
 
     expect(container.firstChild).toMatchInlineSnapshot(`
       <div
-        class="accent-bar normal"
+        class="accent-bar__AccentBarNormal-sc-1nm9o64-1 cbYeWr"
       />
     `);
   });
@@ -19,7 +19,7 @@ describe('<AccentBar />', () => {
 
     expect(container.firstChild).toMatchInlineSnapshot(`
       <div
-        class="accent-bar slim"
+        class="accent-bar__AccentBarSlim-sc-1nm9o64-0 hLEDyk"
       />
     `);
   });

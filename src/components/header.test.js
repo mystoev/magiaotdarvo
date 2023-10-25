@@ -23,7 +23,7 @@ describe('<Header /> tests', () => {
     expect(container).toMatchInlineSnapshot(`
       <div>
         <div
-          class="menu-header"
+          class="header__MenuHeader-sc-1c6m008-0 gMaEOp"
         >
           <a
             href="/"
@@ -31,14 +31,14 @@ describe('<Header /> tests', () => {
             <svg />
           </a>
           <div
-            class="header-menu-small"
+            class="header-menu__MenuSmall-sc-1yxapcf-0 gTPzqw"
           >
             <svg
               class="menu-icon"
             />
           </div>
           <ul
-            class="header-menu"
+            class="header-menu__MenuDefault-sc-1yxapcf-1 fEbyIa"
           >
             <li>
               <a

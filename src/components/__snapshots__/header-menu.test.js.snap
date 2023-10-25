@@ -3,14 +3,14 @@
 exports[`<HeaderMenu /> should render 1`] = `
 <div>
   <div
-    class="header-menu-small"
+    class="header-menu__MenuSmall-sc-1yxapcf-0 gTPzqw"
   >
     <svg
       class="menu-icon"
     />
   </div>
   <ul
-    class="header-menu"
+    class="header-menu__MenuDefault-sc-1yxapcf-1 fEbyIa"
   />
 </div>
 `;
@@ -18,14 +18,14 @@ exports[`<HeaderMenu /> should render 1`] = `
 exports[`<HeaderMenu /> should render with links 1`] = `
 <div>
   <div
-    class="header-menu-small"
+    class="header-menu__MenuSmall-sc-1yxapcf-0 gTPzqw"
   >
     <svg
       class="menu-icon"
     />
   </div>
   <ul
-    class="header-menu"
+    class="header-menu__MenuDefault-sc-1yxapcf-1 fEbyIa"
   >
     <li>
       <a

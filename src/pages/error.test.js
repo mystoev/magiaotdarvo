@@ -29,7 +29,7 @@ describe('error page', () => {
     expect(container).toMatchInlineSnapshot(`
       <div>
         <div
-          id="error-page"
+          class="error__ErrorPageContainer-sc-11niwro-0 cyxbOs"
         >
           <div>
             Упс!

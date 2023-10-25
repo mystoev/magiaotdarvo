@@ -3,7 +3,7 @@
 exports[`<Upload /> tests should render 1`] = `
 <div>
   <div
-    class="parent"
+    class="upload__FileUpload-sc-ukrmrf-0 gieWOH"
   >
     <div
       class="file-upload"

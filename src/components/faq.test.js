@@ -10,10 +10,10 @@ describe('<FAQ />', () => {
     expect(container).toMatchInlineSnapshot(`
       <div>
         <div
-          class="accent-bar normal"
+          class="accent-bar__AccentBarNormal-sc-1nm9o64-1 cbYeWr"
         />
         <div
-          class="header-titles"
+          class="page-header__HeaderTitles-sc-1ejvrf1-0 gErLqz"
         >
           <h1>
             ЧЕСТО ЗАДАВАНИ ВЪПРОСИ
@@ -23,10 +23,10 @@ describe('<FAQ />', () => {
           </h2>
         </div>
         <div
-          class="accent-bar normal"
+          class="accent-bar__AccentBarNormal-sc-1nm9o64-1 cbYeWr"
         />
         <div
-          class="faq-container"
+          class="faq__FAQContainer-sc-1xuqxwm-0 eDpewO"
         >
           <h3
             id="faq1"

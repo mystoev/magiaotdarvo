@@ -23,7 +23,7 @@ describe('email sent page', () => {
           Вашето запитване беше изпратено успешно!
         </div>
         <div
-          class="email-sent"
+          class="email-sent__EmailSentContainer-sc-j9f5p7-0 fWhpgS"
         >
           <p>
             Благодарим Ви, за Вашия интерес!

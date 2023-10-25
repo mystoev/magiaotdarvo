@@ -20,10 +20,10 @@ describe('<Footer />', () => {
     expect(container).toMatchInlineSnapshot(`
       <div>
         <div
-          class="footer-container"
+          class="footer__FooterContainer-sc-1cza4xd-0 flkUrT"
         >
           <div
-            class="accent-bar normal"
+            class="accent-bar__AccentBarNormal-sc-1nm9o64-1 cbYeWr"
           />
           <div
             class="footer"

@@ -18,19 +18,19 @@ describe('<CategoryThumbnail />', () => {
         href="/category/undefined"
       >
         <div
-          class="category category-background"
+          class="category-thumbnail__CategoryThumbnailStyled-sc-vcs4ko-0 iGqSaU"
         />
         <div
-          class="accent-bar slim"
+          class="accent-bar__AccentBarSlim-sc-1nm9o64-0 hLEDyk"
         />
         <p
-          class="thumb-title"
+          class="category-thumbnail__ThumbTitle-sc-vcs4ko-1 kLGgnU"
         />
         <p
-          class="thumb-description"
+          class="category-thumbnail__ThumbDescription-sc-vcs4ko-2 jkwqjx"
         />
         <div
-          class="accent-bar slim"
+          class="accent-bar__AccentBarSlim-sc-1nm9o64-0 hLEDyk"
         />
       </a>
     `);
@@ -48,27 +48,27 @@ describe('<CategoryThumbnail />', () => {
         href="/category/link"
       >
         <div
-          class="category category-background"
+          class="category-thumbnail__CategoryThumbnailStyled-sc-vcs4ko-0 iGqSaU"
         >
           <img
             src="svg"
           />
         </div>
         <div
-          class="accent-bar slim"
+          class="accent-bar__AccentBarSlim-sc-1nm9o64-0 hLEDyk"
         />
         <p
-          class="thumb-title"
+          class="category-thumbnail__ThumbTitle-sc-vcs4ko-1 kLGgnU"
         >
           Нова категория
         </p>
         <p
-          class="thumb-description"
+          class="category-thumbnail__ThumbDescription-sc-vcs4ko-2 jkwqjx"
         >
           За теста
         </p>
         <div
-          class="accent-bar slim"
+          class="accent-bar__AccentBarSlim-sc-1nm9o64-0 hLEDyk"
         />
       </a>
     `);

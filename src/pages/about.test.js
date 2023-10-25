@@ -21,14 +21,14 @@ describe('about page', () => {
           Моята история
         </div>
         <div
-          class="section-image-container"
+          class="image-section__ImageContainer-sc-1qjyve1-0 jmhPHN"
         >
           <img
             src="[object Object]"
           />
         </div>
         <div
-          class="about-container"
+          class="about__AboutContainer-sc-10rbvyf-0 ldPgiA"
         >
           <p>
             Казвам се Димитранка Георгиева и споделям с вас, че съм подвластна на магията на дървото! Това, за някои може да звучи смешно, несериозно или налудничево, но за мен си е самата истина.

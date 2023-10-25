@@ -3,7 +3,7 @@
 exports[`<SelectableImage /> tests should render 1`] = `
 <div>
   <div
-    class="selectable-image-container"
+    class="selectable-image__SelectableImageContainer-sc-1px0fdw-0 kQTPRI"
   >
     <div
       class="selectable-image-overlay normal"
@@ -19,7 +19,7 @@ exports[`<SelectableImage /> tests should render 1`] = `
 exports[`<SelectableImage /> tests should render with image 1`] = `
 <div>
   <div
-    class="selectable-image-container"
+    class="selectable-image__SelectableImageContainer-sc-1px0fdw-0 kQTPRI"
   >
     <div
       class="selectable-image-overlay normal"

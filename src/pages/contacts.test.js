@@ -22,7 +22,7 @@ describe('contacts page', () => {
            
         </div>
         <div
-          class="contacts-container"
+          class="contacts__ContactsContainer-sc-14q2g09-0 jyPCCV"
         >
           <h2>
             Телефон

@@ -29,33 +29,33 @@ describe('<CategoriesList />', () => {
         class="section"
       >
         <div
-          class="categories-list"
+          class="categories-list__CategoriesListStyled-sc-6xdcd1-0 iiXrbZ"
         >
           <a
             href="/category/test-name"
           >
             <div
-              class="category category-background"
+              class="category-thumbnail__CategoryThumbnailStyled-sc-vcs4ko-0 iGqSaU"
             >
               <img
                 src="./images/test-name/cover.jpg"
               />
             </div>
             <div
-              class="accent-bar slim"
+              class="accent-bar__AccentBarSlim-sc-1nm9o64-0 hLEDyk"
             />
             <p
-              class="thumb-title"
+              class="category-thumbnail__ThumbTitle-sc-vcs4ko-1 kLGgnU"
             >
               test-title
             </p>
             <p
-              class="thumb-description"
+              class="category-thumbnail__ThumbDescription-sc-vcs4ko-2 jkwqjx"
             >
               test-description
             </p>
             <div
-              class="accent-bar slim"
+              class="accent-bar__AccentBarSlim-sc-1nm9o64-0 hLEDyk"
             />
           </a>
         </div>
