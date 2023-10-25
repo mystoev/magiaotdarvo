@@ -1,5 +1,6 @@
 import React, { useEffect, useReducer } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
+import styled from 'styled-components';
 
 import Upload from '../../components/upload';
 import SelectableImage from '../../components/selectable-image';
@@ -13,7 +14,58 @@ import {
   IMAGES_TO_DELETE_CHANGE,
   PRODUCT_LOADED
 } from './constants';
-import './edit-product.less';
+
+const EditContainer = styled.div`
+  width: 800px;
+  margin: auto;
+  padding-bottom: 50px;
+
+  .images-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  @media only screen and (max-width: 768px) {
+    font-size: 0.75em;
+    width: 100%;
+
+    h1,
+    h2 {
+      padding: 5px;
+    }
+
+    input,
+    textarea {
+      width: calc(100% - 14px);
+      margin-left: 5px;
+      padding: 2px;
+    }
+
+    .parent {
+      width: calc(100% - 10px);
+      margin-left: 5px;
+      font-size: 1.25em;
+
+      .file-upload {
+        padding: 0.5em;
+      }
+    }
+
+    .images-container {
+      margin-left: 5px;
+
+      > div {
+        height: 100px;
+      }
+    }
+
+    button {
+      font-size: 1.25em;
+      padding: 10px;
+      margin-left: 5px;
+    }
+  }
+`;
 
 const EditProduct = () => {
   const navigate = useNavigate();
@@ -55,7 +107,7 @@ const EditProduct = () => {
   };
 
   return (
-    <div className="edit-container">
+    <EditContainer>
       <h1>Редактиране</h1>
       <h2>Заглавие</h2>
       <input
@@ -104,7 +156,7 @@ const EditProduct = () => {
       <button className="button-default" onClick={handleSave}>
         Запази промените
       </button>
-    </div>
+    </EditContainer>
   );
 };
 

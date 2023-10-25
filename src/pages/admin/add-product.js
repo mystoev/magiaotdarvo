@@ -6,7 +6,6 @@ import { useAddData } from '../../hooks/use-update-data';
 import { CATEGORIES_MAP } from '../../constants/data';
 import { addProductReducer } from './reducers';
 import { NAME_CHANGE, DESCRIPTION_CHANGE, IMAGES_CHANGE } from './constants';
-import './edit-product.less';
 
 const AddProduct = () => {
   const navigate = useNavigate();

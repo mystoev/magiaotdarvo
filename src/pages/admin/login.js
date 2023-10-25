@@ -1,9 +1,21 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
 
 import { Header } from '../../components';
 import { login } from '../../hooks/use-login';
-import './login.less';
+
+const AdminLogin = styled.div`
+  margin: 50px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+
+  input {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+`;
 
 const Login = ({ setToken }) => {
   const [state, setState] = useState({
@@ -24,7 +36,7 @@ const Login = ({ setToken }) => {
   return (
     <>
       <Header links={[{ to: '/', text: 'Начало' }]} />
-      <div className="admin-login">
+      <AdminLogin>
         <h1>Вход</h1>
         <fieldset>
           <label>Потребител</label>
@@ -48,7 +60,7 @@ const Login = ({ setToken }) => {
           Влез
         </button>
         {state.error && <h2>{state.error}</h2>}
-      </div>
+      </AdminLogin>
     </>
   );
 };
