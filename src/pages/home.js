@@ -2,7 +2,6 @@ import React from 'react';
 
 import { PageHeader, ImageSection, CategoriesList, QueryForm } from '../components';
 import { HomeImage } from '../../public/images';
-import './home.less';
 
 const WelcomeSection = () => (
   <div className="section">

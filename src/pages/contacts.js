@@ -1,10 +1,25 @@
 import React from 'react';
+import styled from 'styled-components';
 
 import { PageHeader, QueryForm } from '../components';
-import './contacts.less';
+
+const ContactsContainer = styled.div`
+  p {
+    text-align: center;
+  }
+
+  h2 {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  a {
+    color: var(--secondary-background-color);
+  }
+`;
 
 const ContactsInfo = () => (
-  <div className="contacts-container">
+  <ContactsContainer>
     <h2>Телефон</h2>
     <p>0890932001</p>
     <h2>Имейл</h2>
@@ -13,7 +28,7 @@ const ContactsInfo = () => (
     </p>
     <h2>Адрес</h2>
     <p>5177, с. Сушица, община Стражица, обл. Велико Търново</p>
-  </div>
+  </ContactsContainer>
 );
 
 const Contacts = () => (

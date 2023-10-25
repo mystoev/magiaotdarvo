@@ -2,12 +2,85 @@ import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import ImageGallery from 'react-image-gallery';
 import 'react-image-gallery/styles/css/image-gallery.css';
+import styled from 'styled-components';
 
 import { useProduct } from '../hooks/use-product';
 import { PageHeader, QueryForm } from '../components';
 import { CATEGORIES_MAP, WEBSITE } from '../constants/data';
 import { imageHref } from '../selectors/image';
-import './product.less';
+
+const ProductDetailsContaier = styled.div`
+  width: 90%;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+
+  .image-gallery-original-style {
+    height: 640px;
+    border-radius: 3px;
+    background-color: var(--main-font-color);
+
+    img {
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  .image-gallery-thumbnail-style img {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+  }
+
+  .image-gallery {
+    flex-basis: 70%;
+  }
+
+  .product-details {
+    flex-basis: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  a {
+    color: var(--main-font-color);
+  }
+
+  .product-query-container {
+    font-size: 0.75em;
+    width: 80%;
+
+    h3 {
+      margin-bottom: 10px;
+    }
+
+    fieldset {
+      width: 100%;
+    }
+
+    input {
+      height: 24px;
+    }
+
+    textarea {
+      height: 120px;
+    }
+
+    button {
+      margin-top: 5px;
+    }
+  }
+
+  @media only screen and (max-width: 768px) {
+    flex-direction: column;
+
+    .product-query-container {
+      width: 100%;
+    }
+  }
+`;
 
 const Product = () => {
   const { category, productName } = useParams();
@@ -36,7 +109,7 @@ const Product = () => {
       )}
 
       {images && (
-        <div className="product-details-container">
+        <ProductDetailsContaier>
           <ImageGallery items={images} showPlayButton={false} showFullscreenButton={false} />
           <div className="product-details">
             <div>
@@ -53,7 +126,7 @@ const Product = () => {
               <QueryForm slim productLink={`${WEBSITE}/#/product/${category}/${productName}`} />
             </div>
           </div>
-        </div>
+        </ProductDetailsContaier>
       )}
     </div>
   );

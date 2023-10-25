@@ -1,14 +1,29 @@
 import React from 'react';
+import styled from 'styled-components';
 
 import { PageHeader, ImageSection } from '../components';
 import { ChisselsImage } from '../../public/images';
-import './about.less';
+
+const AboutContainer = styled.div`
+  max-width: 800px;
+  margin: auto;
+  margin-bottom: 50px;
+
+  p {
+    margin: 20px;
+    line-height: 1.5em;
+  }
+
+  h3 {
+    margin: 20px;
+  }
+`;
 
 const About = () => (
   <>
     <PageHeader title="За мен" description="Моята история" />
     <ImageSection image={ChisselsImage} />
-    <div className="about-container">
+    <AboutContainer>
       <p>
         Казвам се Димитранка Георгиева и споделям с вас, че съм подвластна на магията на дървото!
         Това, за някои може да звучи смешно, несериозно или налудничево, но за мен си е самата
@@ -56,7 +71,7 @@ const About = () => (
       <p>
         <i>Аз вече съм свободна и щастлива!</i>
       </p>
-    </div>
+    </AboutContainer>
   </>
 );
 
