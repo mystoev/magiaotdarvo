@@ -6,10 +6,6 @@
 
 # Features
 
-TBD!
-
-- [ ] Tryout https://fontawesome.com/
-
 ## To update cover images
 
 ```shell
