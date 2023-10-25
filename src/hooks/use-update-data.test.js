@@ -1,8 +1,7 @@
 import axios from 'axios';
 
-import Data from '../../public/data.json';
 import { useUpdateData, useAddData } from './use-update-data';
-import { ADD_FILE, UPDATE_FILE } from '../constants/data';
+import { ADD_FILE, UPDATE_FILE, LOCAL_SERVER } from '../constants/data';
 
 jest.mock('axios');
 
@@ -17,22 +16,16 @@ describe('use-update-data', () => {
       productName: 'notebook-caption',
       newProductName: 'test-product',
       description: 'test-description',
-      imagesToDelete: { 'notebook-caption.jpg': true }
+      imagesColumn: 'cover.jpg,new_image.jpg',
+      images: []
     };
 
     const data = await useUpdateData(updateParams);
     expect(data).toBe('test update');
 
-    const product = Data.find((c) => c.category == updateParams.category).content.find(
-      (c) => c.folder == updateParams.productName
-    );
-    expect(product.name).toBe(updateParams.newProductName);
-    expect(product.description).toBe(updateParams.description);
-    expect(product.files).toEqual(['cover.jpg']);
-    expect(axios.post).toHaveBeenCalledWith(UPDATE_FILE, {
+    expect(axios.post).toHaveBeenCalledWith(LOCAL_SERVER + UPDATE_FILE, {
       key: 'test-value',
-      data: Data,
-      newImages: null
+      ...updateParams
     });
   });
 
@@ -43,27 +36,16 @@ describe('use-update-data', () => {
       productName: 'earings-ethno',
       newProductName: 'test-product',
       description: 'test-description',
-      imagesToDelete: { 'earings-ethno.jpg': true },
-      newImages: [{ name: 'test.jpg' }]
+      imagesColumn: 'new_image.jpg',
+      images: [{ name: 'test.jpg' }]
     };
 
     const data = await useUpdateData(updateParams);
     expect(data).toBe('test update');
 
-    const product = Data.find((c) => c.category == updateParams.category).content.find(
-      (c) => c.folder == updateParams.productName
-    );
-    expect(product.name).toBe(updateParams.newProductName);
-    expect(product.description).toBe(updateParams.description);
-    expect(product.files).toEqual(['cover.jpg', 'test.jpg']);
-    expect(axios.post).toHaveBeenCalledWith(UPDATE_FILE, {
+    expect(axios.post).toHaveBeenCalledWith(LOCAL_SERVER + UPDATE_FILE, {
       key: 'test-value',
-      data: Data,
-      newImages: {
-        category: updateParams.category,
-        productName: updateParams.productName,
-        newImages: updateParams.newImages
-      }
+      ...updateParams
     });
   });
 });
@@ -78,26 +60,14 @@ describe('use-add-data', () => {
       category: 'books',
       newProductName: 'test-product',
       description: 'test-description',
-      newImages: [{ name: 'test-add.jpg' }]
+      images: [{ name: 'test-add.jpg' }]
     };
-
     const data = await useAddData(addParams);
     expect(data).toBe('test add');
 
-    const product = Data.find((c) => c.category == addParams.category).content.find(
-      (c) => c.folder == addParams.newProductName
-    );
-    expect(product.name).toBe(addParams.newProductName);
-    expect(product.description).toBe(addParams.description);
-    expect(product.files).toEqual(['test-add.jpg']);
-    expect(axios.post).toHaveBeenCalledWith(ADD_FILE, {
+    expect(axios.post).toHaveBeenCalledWith(LOCAL_SERVER + ADD_FILE, {
       key: 'test-value',
-      data: Data,
-      newImages: {
-        category: addParams.category,
-        productName: addParams.newProductName,
-        newImages: addParams.newImages
-      }
+      ...addParams
     });
   });
 });
