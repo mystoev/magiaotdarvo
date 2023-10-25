@@ -2,25 +2,24 @@ import React from 'react';
 import { fireEvent, render } from '@testing-library/react';
 import { MemoryRouter as Router } from 'react-router-dom';
 
-import { useCategoryData } from '../hooks/use-category-data';
+import { useProducts } from '../hooks/use-products';
 import Category, { ITEMS_PER_PAGE } from './category';
 
 jest.mock('react-router-dom', () => ({
   ...jest.requireActual('react-router-dom'),
   useParams: jest.fn().mockReturnValue({ id: 'test-product' })
 }));
-jest.mock('../hooks/use-category-data', () => ({
-  useCategoryData: jest.fn().mockReturnValue({
-    data: {
-      content: [
-        {
-          folder: 'test-folder',
-          name: 'test-name',
-          files: ['test-file1'],
-          category: 'test-category'
-        }
-      ]
-    }
+jest.mock('../hooks/use-products', () => ({
+  useProducts: jest.fn().mockReturnValue({
+    data: [
+      {
+        folder: 'test-folder',
+        name: 'test-name',
+        files: ['test-file1'],
+        category: 'test-category',
+        images: ''
+      }
+    ]
   })
 }));
 jest.mock('../components/page-header', () => ({ title, description }) => (
@@ -47,7 +46,8 @@ describe('category page', () => {
         folder: 'test-folder',
         name: 'test-name',
         files: ['test-file1'],
-        category: 'test-category'
+        category: 'test-category',
+        images: 'cover.jpg,test_image.jpg'
       });
     }
 
@@ -55,13 +55,12 @@ describe('category page', () => {
       folder: 'test-folder',
       name: 'test-name-2',
       files: ['test-file1'],
-      category: 'test-category'
+      category: 'test-category',
+      images: ''
     });
 
-    useCategoryData.mockReturnValue({
-      data: {
-        content: products
-      }
+    useProducts.mockReturnValue({
+      data: products
     });
     const { queryByText } = render(
       <Router>
@@ -76,7 +75,7 @@ describe('category page', () => {
   });
 
   it('should change pages', () => {
-    useCategoryData.mockReturnValue({
+    useProducts.mockReturnValue({
       data: null
     });
 
