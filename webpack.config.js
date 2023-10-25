@@ -37,7 +37,7 @@ module.exports = (env) => {
         },
         {
           test: /\.(css|less)$/i,
-          use: ['style-loader', 'css-loader', 'less-loader']
+          use: ['style-loader', 'css-loader']
         },
         {
           test: /\.svg$/,
