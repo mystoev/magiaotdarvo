@@ -26,20 +26,20 @@ exports[`category page should render 1`] = `
           />
         </div>
         <div
+          class="accent-bar slim"
+        />
+        <div
           class="product-title-container"
         >
-          <div
-            class="accent-bar slim"
-          />
           <p
             class="product-title"
           >
             test-name
           </p>
-          <div
-            class="accent-bar slim"
-          />
         </div>
+        <div
+          class="accent-bar slim"
+        />
       </a>
     </div>
   </div>
