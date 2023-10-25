@@ -6,21 +6,6 @@ function validateRequest($payload)
   return $payload["key"] === $env['TOKEN'];
 }
 
-// function createDataBackup()
-// {
-//   $timestamp = time();
-//   copy('data.json', 'backup/' . $timestamp . '.json');
-// }
-
-// function updateData($payload)
-// {
-//   $file = fopen("data.json", "w") or die("Unable to open file!");
-//   $file_content = json_encode($payload["data"], JSON_UNESCAPED_UNICODE) . PHP_EOL;
-
-//   fwrite($file, $file_content);
-//   fclose($file);
-// }
-
 function writeNewImages($payload, $folder)
 {
   $images = $payload['images'];
@@ -54,18 +39,6 @@ function createCoverImage($payload, $folder)
 
   file_put_contents($folder . '/cover.jpg', $img_data);
 }
-
-// function createLog($imagesData, $folder)
-// {
-//   $log_file_name = 'new-images.log';
-//   file_put_contents($log_file_name, '' . time() . PHP_EOL, FILE_APPEND);
-//   file_put_contents($log_file_name, $folder . '/cover.jpg' . PHP_EOL, FILE_APPEND);
-
-//   $images = $imagesData["newImages"];
-//   foreach ($images as $image) {
-//     file_put_contents($log_file_name, $folder . '/' . $image["name"] . PHP_EOL, FILE_APPEND);
-//   }
-// }
 
 function createFolders($category, $productName)
 {
