@@ -15,13 +15,14 @@ describe('<CategoryThumbnail />', () => {
 
     expect(container.firstChild).toMatchInlineSnapshot(`
       <a
+        class="category-thumbnail__StyledLink-sc-vcs4ko-3 fpTIlN"
         href="/category/undefined"
       >
         <div
           class="category-thumbnail__CategoryThumbnailStyled-sc-vcs4ko-0 iGqSaU"
         />
         <div
-          class="accent-bar__AccentBarSlim-sc-1nm9o64-0 hLEDyk"
+          class="accent-bar__AccentBarBase-sc-1nm9o64-0 accent-bar__AccentBarSlim-sc-1nm9o64-1 eYwklx dIekrv"
         />
         <p
           class="category-thumbnail__ThumbTitle-sc-vcs4ko-1 kLGgnU"
@@ -30,7 +31,7 @@ describe('<CategoryThumbnail />', () => {
           class="category-thumbnail__ThumbDescription-sc-vcs4ko-2 jkwqjx"
         />
         <div
-          class="accent-bar__AccentBarSlim-sc-1nm9o64-0 hLEDyk"
+          class="accent-bar__AccentBarBase-sc-1nm9o64-0 accent-bar__AccentBarSlim-sc-1nm9o64-1 eYwklx dIekrv"
         />
       </a>
     `);
@@ -45,6 +46,7 @@ describe('<CategoryThumbnail />', () => {
 
     expect(container.firstChild).toMatchInlineSnapshot(`
       <a
+        class="category-thumbnail__StyledLink-sc-vcs4ko-3 fpTIlN"
         href="/category/link"
       >
         <div
@@ -55,7 +57,7 @@ describe('<CategoryThumbnail />', () => {
           />
         </div>
         <div
-          class="accent-bar__AccentBarSlim-sc-1nm9o64-0 hLEDyk"
+          class="accent-bar__AccentBarBase-sc-1nm9o64-0 accent-bar__AccentBarSlim-sc-1nm9o64-1 eYwklx dIekrv"
         />
         <p
           class="category-thumbnail__ThumbTitle-sc-vcs4ko-1 kLGgnU"
@@ -68,7 +70,7 @@ describe('<CategoryThumbnail />', () => {
           За теста
         </p>
         <div
-          class="accent-bar__AccentBarSlim-sc-1nm9o64-0 hLEDyk"
+          class="accent-bar__AccentBarBase-sc-1nm9o64-0 accent-bar__AccentBarSlim-sc-1nm9o64-1 eYwklx dIekrv"
         />
       </a>
     `);

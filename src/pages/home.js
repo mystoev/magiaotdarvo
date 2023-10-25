@@ -1,10 +1,10 @@
 import React from 'react';
 
-import { PageHeader, ImageSection, CategoriesList, QueryForm } from '../components';
+import { PageHeader, ImageSection, CategoriesList, QueryForm, Section } from '../components';
 import { HomeImage } from '../../public/images';
 
 const WelcomeSection = () => (
-  <div className="section">
+  <Section>
     <h3>ДОБРЕ ДОШЛИ В “ЦАРСТВОТО НА ДЪРВОТО“</h3>
     <p>
       Дърворезбата, това е изкуство подвластно на магията на дървото. Тя е един от най-старите
@@ -17,7 +17,7 @@ const WelcomeSection = () => (
       итериора неповторим. Колорит, мекота, изисканост, нежност, любов, културно наследство,
       родолюбие и гордост. Това са неговите дарове.
     </p>
-  </div>
+  </Section>
 );
 
 const Home = () => (

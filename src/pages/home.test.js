@@ -31,7 +31,7 @@ describe('home page', () => {
           />
         </div>
         <div
-          class="section"
+          class="section__SectionStyled-sc-1q03sw9-0 fbZuCG"
         >
           <h3>
             ДОБРЕ ДОШЛИ В “ЦАРСТВОТО НА ДЪРВОТО“

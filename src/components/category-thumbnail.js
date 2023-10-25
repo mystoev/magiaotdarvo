@@ -27,14 +27,26 @@ const ThumbDescription = styled.p`
   line-height: 1.5em;
 `;
 
+const StyledLink = styled(Link)`
+  flex-basis: 32%;
+  min-width: 200px;
+  min-height: 200px;
+  text-align: center;
+  box-shadow: 0px 0px 2px var(--secondary-background-color);
+
+  @media only screen and (max-width: 768px) {
+    flex-basis: 80%;
+  }
+`;
+
 const CategoryThumbnail = ({ title, description, img, id }) => (
-  <Link to={`../category/${id}`}>
+  <StyledLink to={`../category/${id}`}>
     <CategoryThumbnailStyled>{img && <img src={img} />}</CategoryThumbnailStyled>
     <AccentBarSlim />
     <ThumbTitle>{title}</ThumbTitle>
     <ThumbDescription>{description}</ThumbDescription>
     <AccentBarSlim />
-  </Link>
+  </StyledLink>
 );
 
 CategoryThumbnail.propTypes = {

@@ -26,12 +26,13 @@ describe('<CategoriesList />', () => {
 
     expect(container.firstChild).toMatchInlineSnapshot(`
       <div
-        class="section"
+        class="section__SectionStyled-sc-1q03sw9-0 fbZuCG"
       >
         <div
-          class="categories-list__CategoriesListStyled-sc-6xdcd1-0 iiXrbZ"
+          class="categories-list__CategoriesListStyled-sc-6xdcd1-0 dfxvRt"
         >
           <a
+            class="category-thumbnail__StyledLink-sc-vcs4ko-3 fpTIlN"
             href="/category/test-name"
           >
             <div
@@ -42,7 +43,7 @@ describe('<CategoriesList />', () => {
               />
             </div>
             <div
-              class="accent-bar__AccentBarSlim-sc-1nm9o64-0 hLEDyk"
+              class="accent-bar__AccentBarBase-sc-1nm9o64-0 accent-bar__AccentBarSlim-sc-1nm9o64-1 eYwklx dIekrv"
             />
             <p
               class="category-thumbnail__ThumbTitle-sc-vcs4ko-1 kLGgnU"
@@ -55,7 +56,7 @@ describe('<CategoriesList />', () => {
               test-description
             </p>
             <div
-              class="accent-bar__AccentBarSlim-sc-1nm9o64-0 hLEDyk"
+              class="accent-bar__AccentBarBase-sc-1nm9o64-0 accent-bar__AccentBarSlim-sc-1nm9o64-1 eYwklx dIekrv"
             />
           </a>
         </div>

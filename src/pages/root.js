@@ -96,24 +96,6 @@ svg {
   filter: drop-shadow(0px 0px 5px var(--secondary-accent));
 }
 
-.section {
-  margin: auto;
-  margin-bottom: 50px;
-  max-width: 1024px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-
-  h3 {
-    align-self: center;
-    margin: 40px;
-  }
-
-  p {
-    padding: 10px;
-  }
-}
-
 fieldset {
   border: 0px;
   width: 480px;

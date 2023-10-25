@@ -23,7 +23,7 @@ describe('<Footer />', () => {
           class="footer__FooterContainer-sc-1cza4xd-0 flkUrT"
         >
           <div
-            class="accent-bar__AccentBarNormal-sc-1nm9o64-1 cbYeWr"
+            class="accent-bar__AccentBarBase-sc-1nm9o64-0 accent-bar__AccentBar-sc-1nm9o64-2 eYwklx fDJSZx"
           />
           <div
             class="footer"

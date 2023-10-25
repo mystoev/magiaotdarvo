@@ -10,7 +10,7 @@ describe('<FAQ />', () => {
     expect(container).toMatchInlineSnapshot(`
       <div>
         <div
-          class="accent-bar__AccentBarNormal-sc-1nm9o64-1 cbYeWr"
+          class="accent-bar__AccentBarBase-sc-1nm9o64-0 accent-bar__AccentBar-sc-1nm9o64-2 eYwklx fDJSZx"
         />
         <div
           class="page-header__HeaderTitles-sc-1ejvrf1-0 gErLqz"
@@ -23,7 +23,7 @@ describe('<FAQ />', () => {
           </h2>
         </div>
         <div
-          class="accent-bar__AccentBarNormal-sc-1nm9o64-1 cbYeWr"
+          class="accent-bar__AccentBarBase-sc-1nm9o64-0 accent-bar__AccentBar-sc-1nm9o64-2 eYwklx fDJSZx"
         />
         <div
           class="faq__FAQContainer-sc-1xuqxwm-0 eDpewO"

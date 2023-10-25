@@ -15,7 +15,7 @@ describe('<PageHeader />', () => {
     expect(container).toMatchInlineSnapshot(`
       <div>
         <div
-          class="accent-bar__AccentBarNormal-sc-1nm9o64-1 cbYeWr"
+          class="accent-bar__AccentBarBase-sc-1nm9o64-0 accent-bar__AccentBar-sc-1nm9o64-2 eYwklx fDJSZx"
         />
         <div
           class="page-header__HeaderTitles-sc-1ejvrf1-0 gErLqz"
@@ -25,7 +25,7 @@ describe('<PageHeader />', () => {
           </h1>
         </div>
         <div
-          class="accent-bar__AccentBarNormal-sc-1nm9o64-1 cbYeWr"
+          class="accent-bar__AccentBarBase-sc-1nm9o64-0 accent-bar__AccentBar-sc-1nm9o64-2 eYwklx fDJSZx"
         />
       </div>
     `);
@@ -41,7 +41,7 @@ describe('<PageHeader />', () => {
     expect(container).toMatchInlineSnapshot(`
       <div>
         <div
-          class="accent-bar__AccentBarNormal-sc-1nm9o64-1 cbYeWr"
+          class="accent-bar__AccentBarBase-sc-1nm9o64-0 accent-bar__AccentBar-sc-1nm9o64-2 eYwklx fDJSZx"
         />
         <div
           class="page-header__HeaderTitles-sc-1ejvrf1-0 gErLqz"
@@ -55,7 +55,7 @@ describe('<PageHeader />', () => {
           </a>
         </div>
         <div
-          class="accent-bar__AccentBarNormal-sc-1nm9o64-1 cbYeWr"
+          class="accent-bar__AccentBarBase-sc-1nm9o64-0 accent-bar__AccentBar-sc-1nm9o64-2 eYwklx fDJSZx"
         />
       </div>
     `);

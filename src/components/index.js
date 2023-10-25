@@ -8,3 +8,4 @@ export { default as CategoryThumbnail } from './category-thumbnail';
 export { default as QueryForm } from './query-form';
 export { default as FAQ } from './faq';
 export { default as HeaderMenu } from './header-menu';
+export { default as Section } from './section';
