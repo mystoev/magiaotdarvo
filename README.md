@@ -8,7 +8,6 @@
 
 TBD!
 
-- [ ] Add the ability to change the cover photo
 - [ ] Incorporate this https://maximorlov.com/linting-rules-for-asynchronous-code-in-javascript/
 - [ ] Tryout https://fontawesome.com/
 
