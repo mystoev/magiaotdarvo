@@ -1,12 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
 
-import './image-section.less';
+const ImageContainer = styled.div`
+  margin-top: 10px;
+
+  img {
+    width: 100%;
+  }
+`;
 
 const ImageSection = ({ image }) => (
-  <div className="section-image-container">
+  <ImageContainer>
     <img src={image} />
-  </div>
+  </ImageContainer>
 );
 
 ImageSection.propTypes = {

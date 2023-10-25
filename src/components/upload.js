@@ -1,7 +1,40 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
 
-import './upload.less';
+const FileUpload = styled.div`
+  width: 450px;
+  margin: 20px 0;
+  background: #ffffff;
+  border-radius: 25px;
+
+  .file-upload {
+    text-align: center;
+    border: 5px dashed var(--secondary-accent);
+    border-radius: 25px;
+    padding: 1.5rem;
+    position: relative;
+    cursor: pointer;
+
+    p {
+      font-size: 0.87rem;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    input {
+      display: block;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      opacity: 0;
+      cursor: pointer;
+    }
+  }
+`;
 
 const fileToDataURL = (file) => {
   const reader = new FileReader();
@@ -33,7 +66,7 @@ const Upload = ({ onUpload }) => {
   };
 
   return (
-    <div className="parent">
+    <FileUpload>
       <div className="file-upload">
         {selectedNames.length > 0 ? (
           <>
@@ -46,7 +79,7 @@ const Upload = ({ onUpload }) => {
         )}
         <input data-testid="file-input" type="file" multiple onChange={handleChange} />
       </div>
-    </div>
+    </FileUpload>
   );
 };
 

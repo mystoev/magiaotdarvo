@@ -1,10 +1,81 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { HashLink } from 'react-router-hash-link';
+import styled from 'styled-components';
 
 import { AccentBar } from '.';
 import { FacebookIcon, InstagramIcon } from '../../public/images';
-import './footer.less';
+
+const FooterContainer = styled.div`
+  margin-top: auto;
+
+  .footer {
+    padding: 20px 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-content: space-evenly;
+    background-color: var(--secondary-background-color);
+  }
+
+  .footer-section {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    h3 {
+      color: var(--main-background-color);
+      margin-bottom: 10px;
+      text-decoration: underline;
+    }
+
+    p,
+    a {
+      color: var(--main-background-color);
+
+      span {
+        font-family: Verdana;
+        font-size: 0.8em;
+      }
+    }
+
+    .social-link {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .social-link span {
+      font-size: 0.8em;
+    }
+
+    .social-icon {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  .copyright {
+    display: block;
+    font-size: 0.6em;
+    line-height: 1.4em;
+    text-align: center;
+
+    span {
+      font-family: Verdana;
+    }
+  }
+
+  @media only screen and (max-width: 768px) {
+    flex-direction: column;
+    gap: 30px;
+
+    .footer-section {
+      align-items: center;
+      text-align: center;
+    }
+  }
+`;
 
 const SocialLink = ({ Img, link, children }) => (
   <a className="social-link" href={link} target="_blank" rel="noreferrer">
@@ -20,7 +91,7 @@ SocialLink.propTypes = {
 };
 
 const Footer = () => (
-  <div className="footer-container">
+  <FooterContainer>
     <AccentBar />
     <div className="footer">
       <div className="footer-section">
@@ -60,7 +131,7 @@ const Footer = () => (
     <div className="copyright">
       <span>©</span> 2022 Магия от дърво. Всички права запазени.
     </div>
-  </div>
+  </FooterContainer>
 );
 
 export default Footer;

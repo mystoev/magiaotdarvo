@@ -1,15 +1,39 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
 
 import { imageHref } from '../selectors/image';
-import './selectable-image.less';
+
+const SelectableImageContainer = styled.div`
+  position: relative;
+  display: inline-block;
+  height: 200px;
+  margin: 0 10px 10px 0;
+
+  .selectable-image {
+    height: 100%;
+  }
+
+  .selectable-image-overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: red;
+
+    &.normal {
+      opacity: 0;
+    }
+    &.hidden {
+      opacity: 0.6;
+    }
+  }
+`;
 
 const SelectableImage = ({ category, productName, file, onSelect }) => {
   const [isSelected, setIsSelected] = useState(false);
 
   return (
-    <div
-      className="selectable-image-container"
+    <SelectableImageContainer
       onClick={() => {
         setIsSelected(!isSelected);
         onSelect?.({ file, isSelected: !isSelected });
@@ -19,7 +43,7 @@ const SelectableImage = ({ category, productName, file, onSelect }) => {
           isSelected ? 'selectable-image-overlay hidden' : 'selectable-image-overlay normal'
         }></div>
       <img src={imageHref(category, productName, file)} className="selectable-image" />
-    </div>
+    </SelectableImageContainer>
   );
 };
 

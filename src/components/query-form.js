@@ -2,11 +2,39 @@ import _ from 'lodash';
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { useNavigate } from 'react-router-dom';
+import styled from 'styled-components';
 
 import { useSendEmail } from '../hooks/use-send-email';
-import './query-form.less';
 
-const QueryForm = ({ slim, productLink = null }) => {
+const QueryFormDefault = styled.div`
+  margin: 50px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+
+  p {
+    max-width: 800px;
+    text-indent: 50px;
+    margin: 0px 20px;
+  }
+
+  input,
+  textarea {
+    font-family: Verdana;
+    font-size: 0.8em;
+  }
+`;
+
+const QueryFormSlim = styled.div`
+  input,
+  textarea {
+    font-family: Verdana;
+    font-size: 0.8em;
+  }
+`;
+
+const QueryFormContent = ({ slim, productLink = null }) => {
   const [state, setState] = useState({
     name: '',
     email: '',
@@ -21,7 +49,7 @@ const QueryForm = ({ slim, productLink = null }) => {
     }
   });
   return (
-    <div className={slim ? 'query-form-slim' : 'query-form'}>
+    <>
       {!slim && (
         <p>
           Изпрати запитване, като попълниш формата по-долу, след което ще получиш обаждане за
@@ -74,11 +102,23 @@ const QueryForm = ({ slim, productLink = null }) => {
         }>
         Изпрати
       </button>
-    </div>
+    </>
   );
 };
 
-QueryForm.propTypes = {
+const QueryForm = (props) => {
+  return props.slim ? (
+    <QueryFormSlim>
+      <QueryFormContent {...props} />
+    </QueryFormSlim>
+  ) : (
+    <QueryFormDefault>
+      <QueryFormContent {...props} />
+    </QueryFormDefault>
+  );
+};
+
+QueryFormContent.propTypes = QueryForm.propTypes = {
   slim: PropTypes.bool,
   productLink: PropTypes.string
 };

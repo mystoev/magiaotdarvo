@@ -1,9 +1,68 @@
 import React, { useEffect, useRef, useState } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
+import styled from 'styled-components';
 
 import { Menu } from '../../public/images';
-import './header-menu.less';
+
+const MenuSmall = styled.div`
+  display: none;
+
+  @media only screen and (max-width: 768px) {
+    display: block;
+    .menu-icon {
+      height: 40px;
+      margin-right: 20px !important;
+    }
+
+    .header-menu-background-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+    }
+
+    .header-menu-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: 20px 0;
+      width: calc(100% - 2px);
+
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: var(--secondary-background-color);
+      border: 1px solid var(--main-background-color);
+      gap: 20px;
+      z-index: 9;
+
+      li {
+        border-bottom: 1px solid var(--main-background-color);
+      }
+    }
+  }
+`;
+
+const MenuDefault = styled.ul`
+  margin: 50px 0px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+
+  li {
+    font-size: 0.9em;
+    list-style-type: none;
+    white-space: nowrap;
+  }
+  @media only screen and (max-width: 768px) {
+    display: none;
+  }
+`;
 
 const HeaderMenu = ({ links }) => {
   const [show, setShow] = useState(false);
@@ -19,7 +78,7 @@ const HeaderMenu = ({ links }) => {
 
   return (
     <>
-      <div className="header-menu-small">
+      <MenuSmall>
         <Menu className="menu-icon" onClick={() => setShow(!show)} />
         {show && (
           <>
@@ -38,14 +97,14 @@ const HeaderMenu = ({ links }) => {
               onClick={() => setShow(false)}></div>
           </>
         )}
-      </div>
-      <ul className="header-menu">
+      </MenuSmall>
+      <MenuDefault>
         {links.map(({ to, text }) => (
           <li key={text}>
             <Link to={to}>{text.toUpperCase()}</Link>
           </li>
         ))}
-      </ul>
+      </MenuDefault>
     </>
   );
 };
