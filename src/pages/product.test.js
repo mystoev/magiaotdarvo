@@ -2,24 +2,21 @@ import React from 'react';
 import { render } from '@testing-library/react';
 import { MemoryRouter as Router } from 'react-router-dom';
 
-import { useCategoryData } from '../hooks/use-category-data';
+import { useProduct } from '../hooks/use-product';
 import Product from './product';
 
 jest.mock('react-router-dom', () => ({
   ...jest.requireActual('react-router-dom'),
   useParams: jest.fn().mockReturnValue({ category: 'test-category', productName: 'test-folder' })
 }));
-jest.mock('../hooks/use-category-data', () => ({
-  useCategoryData: jest.fn().mockReturnValue({
+jest.mock('../hooks/use-product', () => ({
+  useProduct: jest.fn().mockReturnValue({
     data: {
-      content: [
-        {
-          folder: 'test-folder',
-          name: 'test-name',
-          files: ['test-file1'],
-          category: 'test-category'
-        }
-      ]
+      folder: 'test-folder',
+      name: 'test-name',
+      files: ['test-file1'],
+      category: 'test-category',
+      images: ''
     }
   })
 }));
@@ -90,18 +87,14 @@ describe('product page', () => {
   });
 
   it('should render with price and date', () => {
-    useCategoryData.mockReturnValueOnce({
+    useProduct.mockReturnValueOnce({
       data: {
-        content: [
-          {
-            folder: 'test-folder',
-            name: 'test-name',
-            files: ['test-file1'],
-            category: 'test-category',
-            price: '15',
-            dateCreated: '1 Nov 2022'
-          }
-        ]
+        folder: 'test-folder',
+        description: 'test-description',
+        name: 'test-name',
+        files: ['test-file1'],
+        category: 'test-category',
+        images: ''
       }
     });
     const { container } = render(
@@ -139,15 +132,8 @@ describe('product page', () => {
                   </p>
                 </a>
                 <p>
-                  Цена: 
-                  15
-                </p>
-                <p>
-                  Дата на изработка: 
-                  1 Nov 2022
-                </p>
-                <p>
                   Описание: 
+                  test-description
                 </p>
               </div>
               <div
