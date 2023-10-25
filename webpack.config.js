@@ -5,7 +5,6 @@ const CopyPlugin = require('copy-webpack-plugin');
 const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin');
 
 const {
-  DATA_FILE,
   EMAIL_FILE,
   UPDATE_FILE,
   LOGIN_FILE,
@@ -57,7 +56,6 @@ module.exports = (env) => {
       }),
       new CopyPlugin({
         patterns: [
-          { from: path.join(__dirname, 'public', DATA_FILE) },
           { from: path.join(__dirname, 'src', EMAIL_FILE) },
           { from: path.join(__dirname, 'src', UPDATE_FILE) },
           { from: path.join(__dirname, 'src', LOGIN_FILE) },

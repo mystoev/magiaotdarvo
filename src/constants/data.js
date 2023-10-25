@@ -2,7 +2,6 @@ module.exports = {
   CATEGORIES_PHP: 'categories.php',
   PRODUCTS_PHP: 'products.php',
   PRODUCT_PHP: 'product.php',
-  DATA_FILE: 'data.json',
   EMAIL_FILE: 'email.php',
   LOGIN_FILE: 'login.php',
   UPDATE_FILE: 'update.php',
