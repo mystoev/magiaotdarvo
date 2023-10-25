@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 
-import AccentBar from './accent-bar';
+import { AccentBar, AccentBarSlim } from './accent-bar';
 
 describe('<AccentBar />', () => {
   it('should render', () => {
@@ -9,13 +9,13 @@ describe('<AccentBar />', () => {
 
     expect(container.firstChild).toMatchInlineSnapshot(`
       <div
-        class="accent-bar__AccentBarNormal-sc-1nm9o64-1 cbYeWr"
+        class="accent-bar__AccentBar-sc-1nm9o64-1 gpRwIA"
       />
     `);
   });
 
   it('should render slim', () => {
-    const { container } = render(<AccentBar slim />);
+    const { container } = render(<AccentBarSlim />);
 
     expect(container.firstChild).toMatchInlineSnapshot(`
       <div

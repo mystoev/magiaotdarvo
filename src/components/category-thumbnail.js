@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
-import { AccentBar } from '.';
+import { AccentBarSlim } from '.';
 
 const CategoryThumbnailStyled = styled.div`
   height: 200px;
@@ -30,10 +30,10 @@ const ThumbDescription = styled.p`
 const CategoryThumbnail = ({ title, description, img, id }) => (
   <Link to={`../category/${id}`}>
     <CategoryThumbnailStyled>{img && <img src={img} />}</CategoryThumbnailStyled>
-    <AccentBar slim />
+    <AccentBarSlim />
     <ThumbTitle>{title}</ThumbTitle>
     <ThumbDescription>{description}</ThumbDescription>
-    <AccentBar slim />
+    <AccentBarSlim />
   </Link>
 );
 

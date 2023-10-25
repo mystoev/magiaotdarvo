@@ -1,27 +1,15 @@
-import React from 'react';
-import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-const AccentBarSlim = styled.div`
+const AccentBarBase = styled.div`
   width: 100%;
   background-color: var(--secondary-accent);
   opacity: 0.5;
+`;
+
+export const AccentBarSlim = styled(AccentBarBase)`
   height: 1px;
 `;
 
-const AccentBarNormal = styled.div`
-  width: 100%;
-  background-color: var(--secondary-accent);
-  opacity: 0.5;
+export const AccentBar = styled(AccentBarBase)`
   height: 3px;
 `;
-
-const AccentBar = ({ slim }) => {
-  return slim ? <AccentBarSlim></AccentBarSlim> : <AccentBarNormal></AccentBarNormal>;
-};
-
-AccentBar.propTypes = {
-  slim: PropTypes.bool
-};
-
-export default AccentBar;

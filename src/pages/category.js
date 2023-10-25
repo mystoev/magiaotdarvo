@@ -6,7 +6,7 @@ import styled from 'styled-components';
 
 import { useProducts } from '../hooks/use-products';
 import { CATEGORIES_MAP } from '../constants/data';
-import { PageHeader, AccentBar } from '../components';
+import { PageHeader, AccentBarSlim } from '../components';
 import { imageHref } from '../selectors/image';
 
 export const ITEMS_PER_PAGE = 16;
@@ -22,11 +22,11 @@ const ProductThumbnail = ({ data, category }) => {
           <img className="image-cover" src={imgHref} />
           <img src={imgHref} />
         </div>
-        <AccentBar slim />
+        <AccentBarSlim />
         <div className="product-title-container">
           <p className="product-title">{data.name}</p>
         </div>
-        <AccentBar slim />
+        <AccentBarSlim />
       </Link>
     </div>
   );

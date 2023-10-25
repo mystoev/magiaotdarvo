@@ -1,4 +1,4 @@
-export { default as AccentBar } from './accent-bar';
+export { AccentBar, AccentBarSlim } from './accent-bar';
 export { default as PageHeader } from './page-header';
 export { default as Header } from './header';
 export { default as Footer } from './footer';
