@@ -3,7 +3,7 @@
   margin: 20px auto;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: normal;
   column-gap: 2%;
   row-gap: 20px;
 
@@ -12,7 +12,18 @@
     flex-basis: 23%;
     box-shadow: 0px 0px 2px var(--secondary-background-color);
 
+    .product-title-container {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background: var(--secondary-background-color);
+    }
+
     a {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
       color: var(--secondary-accent);
     }
 
@@ -38,8 +49,8 @@
 
     .product-title,
     .product-description {
-      background: var(--secondary-background-color);
-      white-space: nowrap;
+      // background: var(--secondary-background-color);
+      white-space: break-spaces;
       word-wrap: break-word;
     }
 

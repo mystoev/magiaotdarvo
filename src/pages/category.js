@@ -22,11 +22,11 @@ const ProductThumbnail = ({ data, category }) => {
           <img className="image-cover" src={imgHref} />
           <img src={imgHref} />
         </div>
+        <AccentBar slim />
         <div className="product-title-container">
-          <AccentBar slim />
           <p className="product-title">{data.name}</p>
-          <AccentBar slim />
         </div>
+        <AccentBar slim />
       </Link>
     </div>
   );
