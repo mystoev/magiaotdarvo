@@ -1,11 +1,24 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
 
-import './accent-bar.less';
+const AccentBarSlim = styled.div`
+  width: 100%;
+  background-color: var(--secondary-accent);
+  opacity: 0.5;
+  height: 1px;
+`;
 
-const AccentBar = ({ slim }) => (
-  <div className={slim ? 'accent-bar slim' : 'accent-bar normal'}></div>
-);
+const AccentBarNormal = styled.div`
+  width: 100%;
+  background-color: var(--secondary-accent);
+  opacity: 0.5;
+  height: 3px;
+`;
+
+const AccentBar = ({ slim }) => {
+  return slim ? <AccentBarSlim></AccentBarSlim> : <AccentBarNormal></AccentBarNormal>;
+};
 
 AccentBar.propTypes = {
   slim: PropTypes.bool

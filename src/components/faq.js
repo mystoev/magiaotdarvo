@@ -1,7 +1,20 @@
 import React from 'react';
+import styled from 'styled-components';
 
 import { PageHeader } from '.';
-import './faq.less';
+
+const FAQContainer = styled.div`
+  width: 80%;
+  margin: 20px auto;
+
+  h3 {
+    margin: 20px auto;
+  }
+
+  li {
+    margin-left: 20px;
+  }
+`;
 
 const FAQ = () => (
   <>
@@ -9,7 +22,7 @@ const FAQ = () => (
       title="Често задавани въпроси"
       description="Вижте отговори на въпроси, които могат да Ви интересуват"
     />
-    <div className="faq-container">
+    <FAQContainer>
       <h3 id="faq1">Как да поръчам?</h3>
       <p>Може да направите поръчка по няколко начина:</p>
       <ul>
@@ -28,7 +41,7 @@ const FAQ = () => (
         директно да се обадите на номер 0890932001, където може да получите отговорите на всякакви
         въпроси.
       </p>
-    </div>
+    </FAQContainer>
   </>
 );
 
