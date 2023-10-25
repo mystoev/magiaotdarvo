@@ -8,7 +8,6 @@
 
 TBD!
 
-- [ ] Incorporate this https://maximorlov.com/linting-rules-for-asynchronous-code-in-javascript/
 - [ ] Tryout https://fontawesome.com/
 
 ## To update cover images

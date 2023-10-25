@@ -15,5 +15,9 @@ module.exports = {
     version: 'latest'
   },
   ignorePatterns: ['**/node_modules/*.js'],
-  rules: {}
+  rules: {
+    'no-await-in-loop': 'error',
+    'no-promise-executor-return': 'error',
+    'require-atomic-updates': 'error'
+  }
 };
