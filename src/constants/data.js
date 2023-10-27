@@ -1,4 +1,5 @@
 module.exports = {
+  PHP_FOLDER: 'src/php',
   CATEGORIES_PHP: 'categories.php',
   PRODUCTS_PHP: 'products.php',
   PRODUCT_PHP: 'product.php',

@@ -1,15 +1,15 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 
-import Products from './products';
+import Products from './';
 
-jest.mock('../components/page-header', () => ({ title, description }) => (
+jest.mock('../../components/page-header', () => ({ title, description }) => (
   <div>
     {title} {description}
   </div>
 ));
 
-jest.mock('../components/categories-list', () => () => <div>CategoriesList</div>);
+jest.mock('../../components/categories-list', () => () => <div>CategoriesList</div>);
 
 describe('products page', () => {
   it('should render', () => {

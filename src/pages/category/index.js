@@ -4,10 +4,10 @@ import { useParams, Link } from 'react-router-dom';
 import ReactPaginate from 'react-paginate';
 import styled from 'styled-components';
 
-import { useProducts } from '../hooks/use-products';
-import { CATEGORIES_MAP } from '../constants/data';
-import { PageHeader, AccentBarSlim } from '../components';
-import { imageHref } from '../selectors/image';
+import { useProducts } from '../../hooks/use-products';
+import { CATEGORIES_MAP } from '../../constants/data';
+import { PageHeader, AccentBarSlim } from '../../components';
+import { imageHref } from '../../selectors/image';
 
 export const ITEMS_PER_PAGE = 16;
 

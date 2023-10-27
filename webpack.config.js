@@ -12,7 +12,8 @@ const {
   FUNCTIONS_FILE,
   CATEGORIES_PHP,
   PRODUCTS_PHP,
-  PRODUCT_PHP
+  PRODUCT_PHP,
+  PHP_FOLDER
 } = require('./src/constants/data');
 
 module.exports = (env) => {
@@ -67,14 +68,14 @@ module.exports = (env) => {
       }),
       new CopyPlugin({
         patterns: [
-          { from: path.join(__dirname, 'src', EMAIL_FILE) },
-          { from: path.join(__dirname, 'src', UPDATE_FILE) },
-          { from: path.join(__dirname, 'src', LOGIN_FILE) },
-          { from: path.join(__dirname, 'src', ADD_FILE) },
-          { from: path.join(__dirname, 'src', FUNCTIONS_FILE) },
-          { from: path.join(__dirname, 'src', CATEGORIES_PHP) },
-          { from: path.join(__dirname, 'src', PRODUCTS_PHP) },
-          { from: path.join(__dirname, 'src', PRODUCT_PHP) }
+          { from: path.join(__dirname, PHP_FOLDER, EMAIL_FILE) },
+          { from: path.join(__dirname, PHP_FOLDER, UPDATE_FILE) },
+          { from: path.join(__dirname, PHP_FOLDER, LOGIN_FILE) },
+          { from: path.join(__dirname, PHP_FOLDER, ADD_FILE) },
+          { from: path.join(__dirname, PHP_FOLDER, FUNCTIONS_FILE) },
+          { from: path.join(__dirname, PHP_FOLDER, CATEGORIES_PHP) },
+          { from: path.join(__dirname, PHP_FOLDER, PRODUCTS_PHP) },
+          { from: path.join(__dirname, PHP_FOLDER, PRODUCT_PHP) }
         ]
       })
     ],

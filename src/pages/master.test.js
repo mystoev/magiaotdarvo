@@ -1,10 +1,11 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 
-import Root from './root';
+import Master from './master';
 
 jest.mock('react-router-dom', () => ({
-  Outlet: () => <div>Outlet</div>
+  Outlet: () => <div>Outlet</div>,
+  Link: () => <div>Link</div>
 }));
 jest.mock('../components/header', () => () => <div>Header</div>);
 jest.mock('../components/footer', () => () => <div>Footer</div>);
@@ -12,9 +13,9 @@ jest.mock('../hooks/use-scroll-top', () => ({
   useScrollTop: jest.fn()
 }));
 
-describe('root page', () => {
+describe('master page', () => {
   it('should render', () => {
-    const { container } = render(<Root />);
+    const { container } = render(<Master />);
 
     expect(container).toMatchInlineSnapshot(`
       <div>

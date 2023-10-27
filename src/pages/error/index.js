@@ -2,7 +2,7 @@ import React from 'react';
 import { useRouteError } from 'react-router-dom';
 import styled from 'styled-components';
 
-import { PageHeader } from '../components';
+import { PageHeader } from '../../components';
 
 const ErrorPageContainer = styled.div`
   display: flex;

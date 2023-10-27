@@ -1,9 +1,9 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 
-import About from './about';
+import About from './';
 
-jest.mock('../components/page-header', () => ({ title, description }) => (
+jest.mock('../../components/page-header', () => ({ title, description }) => (
   <div>
     {title} {description}
   </div>
@@ -28,7 +28,7 @@ describe('about page', () => {
           />
         </div>
         <div
-          class="about__AboutContainer-sc-10rbvyf-0 ldPgiA"
+          class="about__AboutContainer-sc-oyqby8-0 oybrc"
         >
           <p>
             Казвам се Димитранка Георгиева и споделям с вас, че съм подвластна на магията на дървото! Това, за някои може да звучи смешно, несериозно или налудничево, но за мен си е самата истина.

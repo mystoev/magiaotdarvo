@@ -1,16 +1,16 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 
-import Query from './query';
+import Query from './';
 
-jest.mock('../components/page-header', () => ({ title, description }) => (
+jest.mock('../../components/page-header', () => ({ title, description }) => (
   <div>
     {title} {description}
   </div>
 ));
 
-jest.mock('../components/query-form', () => () => <div>QueryForm</div>);
-jest.mock('../components/faq', () => () => <div>FAQ</div>);
+jest.mock('../../components/query-form', () => () => <div>QueryForm</div>);
+jest.mock('../../components/faq', () => () => <div>FAQ</div>);
 
 describe('faq page', () => {
   it('should render', () => {

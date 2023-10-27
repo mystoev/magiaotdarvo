@@ -2,14 +2,17 @@ import React from 'react';
 import { render } from '@testing-library/react';
 import { MemoryRouter as Router } from 'react-router-dom';
 
-import { useProduct } from '../hooks/use-product';
-import Product from './product';
+import { useProduct } from '../../hooks/use-product';
+import Product from './';
 
 jest.mock('react-router-dom', () => ({
   ...jest.requireActual('react-router-dom'),
   useParams: jest.fn().mockReturnValue({ category: 'test-category', productName: 'test-folder' })
 }));
-jest.mock('../hooks/use-product', () => ({
+jest.mock('react-image-gallery/styles/css/image-gallery.css', () => null);
+jest.mock('react-image-gallery', () => () => <div>ImageGallery</div>);
+
+jest.mock('../../hooks/use-product', () => ({
   useProduct: jest.fn().mockReturnValue({
     data: {
       folder: 'test-folder',
@@ -20,10 +23,8 @@ jest.mock('../hooks/use-product', () => ({
     }
   })
 }));
-jest.mock('react-image-gallery/styles/css/image-gallery.css', () => null);
-jest.mock('react-image-gallery', () => () => <div>ImageGallery</div>);
-jest.mock('../components/query-form', () => () => <div>QueryForm</div>);
-jest.mock('../components/page-header', () => ({ title, description }) => (
+jest.mock('../../components/query-form', () => () => <div>QueryForm</div>);
+jest.mock('../../components/page-header', () => ({ title, description }) => (
   <div>
     {title} {description}
   </div>
@@ -45,7 +46,7 @@ describe('product page', () => {
             test-name
           </div>
           <div
-            class="product__ProductDetailsContaier-sc-1tg8ziu-0 grnzyi"
+            class="product__ProductDetailsContaier-sc-1m2wwb4-0 eTlwoK"
           >
             <div>
               ImageGallery
@@ -111,7 +112,7 @@ describe('product page', () => {
             test-name
           </div>
           <div
-            class="product__ProductDetailsContaier-sc-1tg8ziu-0 grnzyi"
+            class="product__ProductDetailsContaier-sc-1m2wwb4-0 eTlwoK"
           >
             <div>
               ImageGallery

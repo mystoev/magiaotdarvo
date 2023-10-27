@@ -2,14 +2,14 @@ import React from 'react';
 import { fireEvent, render } from '@testing-library/react';
 import { MemoryRouter as Router } from 'react-router-dom';
 
-import { useProducts } from '../hooks/use-products';
-import Category, { ITEMS_PER_PAGE } from './category';
+import { useProducts } from '../../hooks/use-products';
+import Category, { ITEMS_PER_PAGE } from './';
 
 jest.mock('react-router-dom', () => ({
   ...jest.requireActual('react-router-dom'),
   useParams: jest.fn().mockReturnValue({ id: 'test-product' })
 }));
-jest.mock('../hooks/use-products', () => ({
+jest.mock('../../hooks/use-products', () => ({
   useProducts: jest.fn().mockReturnValue({
     data: [
       {
@@ -22,7 +22,7 @@ jest.mock('../hooks/use-products', () => ({
     ]
   })
 }));
-jest.mock('../components/page-header', () => ({ title, description }) => (
+jest.mock('../../components/page-header', () => ({ title, description }) => (
   <div>
     {title} {description}
   </div>

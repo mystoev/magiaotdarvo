@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { PageHeader, CategoriesList } from '../components';
+import { PageHeader, CategoriesList } from '../../components';
 
 const Products = () => (
   <>

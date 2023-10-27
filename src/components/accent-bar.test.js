@@ -9,7 +9,7 @@ describe('<AccentBar />', () => {
 
     expect(container.firstChild).toMatchInlineSnapshot(`
       <div
-        class="accent-bar__AccentBar-sc-1nm9o64-1 gpRwIA"
+        class="accent-bar__AccentBarBase-sc-1nm9o64-0 accent-bar__AccentBar-sc-1nm9o64-2 eYwklx fDJSZx"
       />
     `);
   });
@@ -19,7 +19,7 @@ describe('<AccentBar />', () => {
 
     expect(container.firstChild).toMatchInlineSnapshot(`
       <div
-        class="accent-bar__AccentBarSlim-sc-1nm9o64-0 hLEDyk"
+        class="accent-bar__AccentBarBase-sc-1nm9o64-0 accent-bar__AccentBarSlim-sc-1nm9o64-1 eYwklx dIekrv"
       />
     `);
   });

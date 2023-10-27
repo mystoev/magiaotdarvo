@@ -4,10 +4,10 @@ import ImageGallery from 'react-image-gallery';
 import 'react-image-gallery/styles/css/image-gallery.css';
 import styled from 'styled-components';
 
-import { useProduct } from '../hooks/use-product';
-import { PageHeader, QueryForm } from '../components';
-import { CATEGORIES_MAP, WEBSITE } from '../constants/data';
-import { imageHref } from '../selectors/image';
+import { useProduct } from '../../hooks/use-product';
+import { PageHeader, QueryForm } from '../../components';
+import { CATEGORIES_MAP, WEBSITE } from '../../constants/data';
+import { imageHref } from '../../selectors/image';
 
 const ProductDetailsContaier = styled.div`
   width: 90%;

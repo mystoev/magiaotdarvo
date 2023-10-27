@@ -1,13 +1,8 @@
-import React from 'react';
-import { Outlet } from 'react-router-dom';
 import { createGlobalStyle } from 'styled-components';
 
 import Azbuki from '../../public/fonts/Azbuki-Regular.woff';
-import { useScrollTop } from '../hooks/use-scroll-top';
-import CookieConsent from 'react-cookie-consent';
-import { Header, Footer } from '../components';
 
-const GlobalStyles = createGlobalStyle`
+export const Styles = createGlobalStyle`
 :root {
   --main-background-color: #f3e5cf;
   --secondary-background-color: #1c1311;
@@ -141,31 +136,4 @@ textarea:focus-visible {
     width: 90%;
   }
 }
-
 `;
-
-const Root = () => {
-  useScrollTop();
-
-  return (
-    <>
-      <GlobalStyles />
-      <Header
-        links={[
-          { to: '/', text: 'Начало' },
-          { to: 'products', text: 'Изделия' },
-          { to: 'query', text: 'Запитване' },
-          { to: 'about', text: 'За мен' },
-          { to: 'contacts', text: 'Контакти' }
-        ]}
-      />
-      <Outlet />
-      <Footer />
-      <CookieConsent location="bottom" cookieName="magiaotdarvo.com" buttonText="Разбрах">
-        Този сайт използва бисквитки, за да работи оптимално за Вас.
-      </CookieConsent>
-    </>
-  );
-};
-
-export default Root;

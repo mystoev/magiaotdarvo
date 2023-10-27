@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { PageHeader, QueryForm } from '../components';
+import { PageHeader, QueryForm } from '../../components';
 
 const ContactsContainer = styled.div`
   p {

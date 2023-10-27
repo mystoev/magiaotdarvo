@@ -1,17 +1,18 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 
-import Error from './error';
+import Error from './';
 
 jest.mock('react-router-dom', () => ({
   useRouteError: jest.fn().mockReturnValue({
     error: {
       statusText: 'test-error-status-text'
     }
-  })
+  }),
+  Link: () => <div>Link</div>
 }));
 
-jest.mock('../components/page-header', () => ({ title, description }) => (
+jest.mock('../../components/page-header', () => ({ title, description }) => (
   <div>
     {title} {description}
   </div>
@@ -29,7 +30,7 @@ describe('error page', () => {
     expect(container).toMatchInlineSnapshot(`
       <div>
         <div
-          class="error__ErrorPageContainer-sc-11niwro-0 cyxbOs"
+          class="error__ErrorPageContainer-sc-jqcgqp-0 dSXBlL"
         >
           <div>
             Упс!

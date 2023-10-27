@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { PageHeader, QueryForm, FAQ } from '../components';
+import { PageHeader, QueryForm, FAQ } from '../../components';
 
 const Query = () => (
   <>

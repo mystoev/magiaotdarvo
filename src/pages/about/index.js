@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { PageHeader, ImageSection } from '../components';
-import { ChisselsImage } from '../../public/images';
+import { PageHeader, ImageSection } from '../../components';
+import { ChisselsImage } from '../../../public/images';
 
 const AboutContainer = styled.div`
   max-width: 800px;

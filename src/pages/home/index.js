@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { PageHeader, ImageSection, CategoriesList, QueryForm, Section } from '../components';
-import { HomeImage } from '../../public/images';
+import { PageHeader, ImageSection, CategoriesList, QueryForm, Section } from '../../components';
+import { HomeImage } from '../../../public/images';
 
 const WelcomeSection = () => (
   <Section>

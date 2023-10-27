@@ -1,16 +1,16 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 
-import Home from './home';
+import Home from './';
 
-jest.mock('../components/page-header', () => ({ title, description }) => (
+jest.mock('../../components/page-header', () => ({ title, description }) => (
   <div>
     {title} {description}
   </div>
 ));
 
-jest.mock('../components/categories-list', () => () => <div>CategoriesList</div>);
-jest.mock('../components/query-form', () => () => <div>QueryForm</div>);
+jest.mock('../../components/categories-list', () => () => <div>CategoriesList</div>);
+jest.mock('../../components/query-form', () => () => <div>QueryForm</div>);
 
 describe('home page', () => {
   it('should render', () => {

@@ -1,4 +1,4 @@
-export { default as Root } from './root';
+export { default as Master } from './master';
 export { default as Home } from './home';
 export { default as Products } from './products';
 export { default as Product } from './product';

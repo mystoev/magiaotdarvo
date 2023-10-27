@@ -1,8 +1,8 @@
 import React from 'react';
-import { CheckmarkIcon } from '../../public/images';
+import { CheckmarkIcon } from '../../../public/images';
 import styled from 'styled-components';
 
-import { FAQ, PageHeader } from '../components';
+import { FAQ, PageHeader } from '../../components';
 
 const EmailSentContainer = styled.div`
   text-align: center;
