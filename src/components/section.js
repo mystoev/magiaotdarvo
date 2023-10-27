@@ -25,7 +25,7 @@ const Section = ({ children }) => {
 };
 
 Section.propTypes = {
-  children: PropTypes.arrayOf(PropTypes.node)
+  children: PropTypes.node
 };
 
 export default Section;
