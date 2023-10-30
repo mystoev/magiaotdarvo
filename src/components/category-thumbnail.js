@@ -41,7 +41,11 @@ const StyledLink = styled(Link)`
 
 const CategoryThumbnail = ({ title, description, img, id }) => (
   <StyledLink to={`../category/${id}`}>
-    <CategoryThumbnailStyled>{img && <img src={img} />}</CategoryThumbnailStyled>
+    {img && (
+      <CategoryThumbnailStyled>
+        <img src={img} />
+      </CategoryThumbnailStyled>
+    )}
     <AccentBarSlim />
     <ThumbTitle>{title}</ThumbTitle>
     <ThumbDescription>{description}</ThumbDescription>

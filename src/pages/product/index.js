@@ -1,105 +1,47 @@
 import React from 'react';
-import { useParams, Link } from 'react-router-dom';
-import ImageGallery from 'react-image-gallery';
-import 'react-image-gallery/styles/css/image-gallery.css';
+import { useParams } from 'react-router-dom';
+
 import styled from 'styled-components';
 
 import { useProduct } from '../../hooks/use-product';
-import { PageHeader, QueryForm } from '../../components';
+import { PageHeader } from '../../components';
 import { CATEGORIES_MAP, WEBSITE } from '../../constants/data';
-import { imageHref } from '../../selectors/image';
+import { selectCarouselImages } from '../../selectors/image';
+import { ProductQueryContainer } from './product-query';
+import { Carousel } from './carousel';
+import { ProductDetails } from './product-details';
 
-const ProductDetailsContaier = styled.div`
+const ProductInfo = styled.div`
   width: 90%;
   margin: 20px auto;
   display: flex;
   flex-direction: row;
   gap: 10px;
 
-  .image-gallery-original-style {
-    height: 640px;
-    border-radius: 3px;
-    background-color: ${(props) => props.theme.colors.second});
-
-    img {
-      height: 100%;
-      object-fit: contain;
-    }
-  }
-
-  .image-gallery-thumbnail-style img {
-    width: 100%;
-    height: 100px;
-    object-fit: cover;
-  }
-
-  .image-gallery {
-    flex-basis: 70%;
-  }
-
-  .product-details {
-    flex-basis: 30%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-
   a {
     color: ${(props) => props.theme.colors.second};
   }
 
-  .product-query-container {
-    font-size: 0.75em;
-    width: 80%;
-
-    h3 {
-      margin-bottom: 10px;
-    }
-
-    fieldset {
-      width: 100%;
-    }
-
-    input {
-      height: 24px;
-    }
-
-    textarea {
-      height: 120px;
-    }
-
-    button {
-      margin-top: 5px;
-    }
-  }
-
   @media only screen and (max-width: 768px) {
     flex-direction: column;
-
-    .product-query-container {
-      width: 100%;
-    }
   }
+`;
+
+const DetailsContainer = styled.div`
+  flex-basis: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 `;
 
 const Product = () => {
   const { category, productName } = useParams();
   const { data: product } = useProduct({ categoryName: category, productName });
 
-  const productFiles = product?.images
-    .split(',')
-    .filter((f) => f !== 'cover.jpg' && f !== 'cover.jpeg' && f !== '.DS_Store');
-  const images = productFiles?.map((file) => {
-    return {
-      original: imageHref(category, productName, file),
-      thumbnail: imageHref(category, productName, file),
-      originalClass: 'image-gallery-original-style',
-      thumbnailClass: 'image-gallery-thumbnail-style'
-    };
-  });
+  const images = selectCarouselImages(product, category, productName);
 
   return (
-    <div>
+    <>
       {product && (
         <PageHeader
           title={CATEGORIES_MAP[category]}
@@ -109,26 +51,15 @@ const Product = () => {
       )}
 
       {images && (
-        <ProductDetailsContaier>
-          <ImageGallery items={images} showPlayButton={false} showFullscreenButton={false} />
-          <div className="product-details">
-            <div>
-              <p>Име: {product.name}</p>
-              <Link to={`/category/${category}`}>
-                <p>Категория: {CATEGORIES_MAP[category]}</p>
-              </Link>
-              {product.price && <p>Цена: {product.price}</p>}
-              {product.dateCreated && <p>Дата на изработка: {product.dateCreated}</p>}
-              <p>Описание: {product.description}</p>
-            </div>
-            <div className="product-query-container">
-              <h3>Изпрати запитване за този продукт</h3>
-              <QueryForm slim productLink={`${WEBSITE}/#/product/${category}/${productName}`} />
-            </div>
-          </div>
-        </ProductDetailsContaier>
+        <ProductInfo>
+          <Carousel data={images} />
+          <DetailsContainer>
+            <ProductDetails product={product} category={category} />
+            <ProductQueryContainer link={`${WEBSITE}/#/product/${category}/${productName}`} />
+          </DetailsContainer>
+        </ProductInfo>
       )}
-    </div>
+    </>
   );
 };
 

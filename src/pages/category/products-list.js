@@ -10,68 +10,6 @@ const ProductsListStyled = styled.div`
   justify-content: normal;
   column-gap: 2%;
   row-gap: 20px;
-
-  > .category-link {
-    text-align: center;
-    flex-basis: 23%;
-    box-shadow: 0px 0px 2px ${(props) => props.theme.colors.second};
-
-    .product-title-container {
-      flex-grow: 1;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      background: ${(props) => props.theme.colors.second};
-    }
-
-    a {
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      color: ${(props) => props.theme.colors.accent};
-    }
-
-    .product-image-container {
-      position: relative;
-      height: 200px;
-    }
-
-    img {
-      position: absolute;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-
-      &.image-cover {
-        opacity: 0.75;
-        object-fit: fill;
-        filter: blur(5px);
-        overflow: hidden;
-      }
-    }
-
-    .product-title,
-    .product-description {
-      white-space: break-spaces;
-      word-wrap: break-word;
-    }
-
-    .product-title {
-      padding: 5px 0px;
-    }
-
-    .product-description {
-      padding-bottom: 5px;
-      font-size: 0.7em;
-    }
-  }
-
-  @media only screen and (max-width: 768px) {
-    > .category-link {
-      flex-basis: 90%;
-    }
-  }
 `;
 
 export const ProductsList = ({ children }) => {
