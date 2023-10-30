@@ -19,12 +19,96 @@ describe('<Footer />', () => {
     );
 
     expect(container).toMatchInlineSnapshot(`
+      .c1 {
+        width: 100%;
+        background-color: #EEC61F;
+        opacity: 0.5;
+      }
+
+      .c2 {
+        height: 3px;
+      }
+
+      .c0 {
+        margin-top: auto;
+      }
+
+      .c0 .footer {
+        padding: 20px 0px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        justify-content: space-evenly;
+        background-color: #1C1311;
+      }
+
+      .c0 .footer-section {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+      }
+
+      .c0 .footer-section h3 {
+        color: #F3E5CF;
+        margin-bottom: 10px;
+        text-decoration: underline;
+      }
+
+      .c0 .footer-section p,
+      .c0 .footer-section a {
+        color: #F3E5CF;
+      }
+
+      .c0 .footer-section p span,
+      .c0 .footer-section a span {
+        font-family: Verdana;
+        font-size: 0.8em;
+      }
+
+      .c0 .footer-section .social-link {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+      }
+
+      .c0 .footer-section .social-link span {
+        font-size: 0.8em;
+      }
+
+      .c0 .footer-section .social-icon {
+        width: 24px;
+        height: 24px;
+      }
+
+      .c0 .copyright {
+        display: block;
+        font-size: 0.6em;
+        line-height: 1.4em;
+        text-align: center;
+      }
+
+      .c0 .copyright span {
+        font-family: Verdana;
+      }
+
+      @media only screen and (max-width:768px) {
+        .c0 {
+          flex-direction: column;
+          gap: 30px;
+        }
+
+        .c0 .footer-section {
+          align-items: center;
+          text-align: center;
+        }
+      }
+
       <div>
         <div
-          class="footer__FooterContainer-sc-1cza4xd-0 kSLTYW"
+          class="c0"
         >
           <div
-            class="accent-bar__AccentBarBase-sc-1nm9o64-0 accent-bar__AccentBar-sc-1nm9o64-2 hRwmLQ fDJSZx"
+            class="c1 c2"
           />
           <div
             class="footer"

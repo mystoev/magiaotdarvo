@@ -39,6 +39,81 @@ describe('product page', () => {
     );
 
     expect(container).toMatchInlineSnapshot(`
+      .c0 {
+        width: 90%;
+        margin: 20px auto;
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+      }
+
+      .c0 .image-gallery-original-style {
+        height: 640px;
+        border-radius: 3px;
+        background-color: #1C1311);
+      }
+
+      .c0 .image-gallery-original-style img {
+        height: 100%;
+        object-fit: contain;
+      }
+
+      .c0 .image-gallery-thumbnail-style img {
+        width: 100%;
+        height: 100px;
+        object-fit: cover;
+      }
+
+      .c0 .image-gallery {
+        flex-basis: 70%;
+      }
+
+      .c0 .product-details {
+        flex-basis: 30%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      .c0 a {
+        color: #1C1311;
+      }
+
+      .c0 .product-query-container {
+        font-size: 0.75em;
+        width: 80%;
+      }
+
+      .c0 .product-query-container h3 {
+        margin-bottom: 10px;
+      }
+
+      .c0 .product-query-container fieldset {
+        width: 100%;
+      }
+
+      .c0 .product-query-container input {
+        height: 24px;
+      }
+
+      .c0 .product-query-container textarea {
+        height: 120px;
+      }
+
+      .c0 .product-query-container button {
+        margin-top: 5px;
+      }
+
+      @media only screen and (max-width:768px) {
+        .c0 {
+          flex-direction: column;
+        }
+
+        .c0 .product-query-container {
+          width: 100%;
+        }
+      }
+
       <div>
         <div>
           <div>
@@ -46,7 +121,7 @@ describe('product page', () => {
             test-name
           </div>
           <div
-            class="product__ProductDetailsContaier-sc-1m2wwb4-0 dryWGx"
+            class="c0"
           >
             <div>
               ImageGallery
@@ -105,6 +180,81 @@ describe('product page', () => {
     );
 
     expect(container).toMatchInlineSnapshot(`
+      .c0 {
+        width: 90%;
+        margin: 20px auto;
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+      }
+
+      .c0 .image-gallery-original-style {
+        height: 640px;
+        border-radius: 3px;
+        background-color: #1C1311);
+      }
+
+      .c0 .image-gallery-original-style img {
+        height: 100%;
+        object-fit: contain;
+      }
+
+      .c0 .image-gallery-thumbnail-style img {
+        width: 100%;
+        height: 100px;
+        object-fit: cover;
+      }
+
+      .c0 .image-gallery {
+        flex-basis: 70%;
+      }
+
+      .c0 .product-details {
+        flex-basis: 30%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      .c0 a {
+        color: #1C1311;
+      }
+
+      .c0 .product-query-container {
+        font-size: 0.75em;
+        width: 80%;
+      }
+
+      .c0 .product-query-container h3 {
+        margin-bottom: 10px;
+      }
+
+      .c0 .product-query-container fieldset {
+        width: 100%;
+      }
+
+      .c0 .product-query-container input {
+        height: 24px;
+      }
+
+      .c0 .product-query-container textarea {
+        height: 120px;
+      }
+
+      .c0 .product-query-container button {
+        margin-top: 5px;
+      }
+
+      @media only screen and (max-width:768px) {
+        .c0 {
+          flex-direction: column;
+        }
+
+        .c0 .product-query-container {
+          width: 100%;
+        }
+      }
+
       <div>
         <div>
           <div>
@@ -112,7 +262,7 @@ describe('product page', () => {
             test-name
           </div>
           <div
-            class="product__ProductDetailsContaier-sc-1m2wwb4-0 dryWGx"
+            class="c0"
           >
             <div>
               ImageGallery

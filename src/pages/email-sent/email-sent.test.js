@@ -16,6 +16,16 @@ describe('email sent page', () => {
     const { container } = render(<EmailSent />);
 
     expect(container).toMatchInlineSnapshot(`
+      .c0 {
+        text-align: center;
+        margin: 70px auto;
+      }
+
+      .c0 img {
+        margin-top: 20px;
+        width: 160px;
+      }
+
       <div>
         <div>
           Успех
@@ -23,7 +33,7 @@ describe('email sent page', () => {
           Вашето запитване беше изпратено успешно!
         </div>
         <div
-          class="email-sent__EmailSentContainer-sc-oqx4q4-0 kIgKBi"
+          class="c0"
         >
           <p>
             Благодарим Ви, за Вашия интерес!

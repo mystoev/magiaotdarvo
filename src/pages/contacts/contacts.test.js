@@ -16,13 +16,26 @@ describe('contacts page', () => {
     const { container } = renderWithTheme(<Contacts />);
 
     expect(container).toMatchInlineSnapshot(`
+      .c0 p {
+        text-align: center;
+      }
+
+      .c0 h2 {
+        text-align: center;
+        margin-top: 20px;
+      }
+
+      .c0 a {
+        color: #1C1311;
+      }
+
       <div>
         <div>
           Контакти
            
         </div>
         <div
-          class="contacts__ContactsContainer-sc-bj40gk-0 ceaQui"
+          class="c0"
         >
           <h2>
             Телефон

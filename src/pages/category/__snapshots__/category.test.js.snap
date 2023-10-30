@@ -1,12 +1,94 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`category page should render 1`] = `
+.c1 {
+  width: 100%;
+  background-color: #EEC61F;
+  opacity: 0.5;
+}
+
+.c2 {
+  height: 1px;
+}
+
+.c0 {
+  width: 95%;
+  margin: 20px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: normal;
+  column-gap: 2%;
+  row-gap: 20px;
+}
+
+.c0 >.category-link {
+  text-align: center;
+  flex-basis: 23%;
+  box-shadow: 0px 0px 2px #1C1311;
+}
+
+.c0 >.category-link .product-title-container {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #1C1311;
+}
+
+.c0 >.category-link a {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  color: #EEC61F;
+}
+
+.c0 >.category-link .product-image-container {
+  position: relative;
+  height: 200px;
+}
+
+.c0 >.category-link img {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.c0 >.category-link img.image-cover {
+  opacity: 0.75;
+  object-fit: fill;
+  filter: blur(5px);
+  overflow: hidden;
+}
+
+.c0 >.category-link .product-title,
+.c0 >.category-link .product-description {
+  white-space: break-spaces;
+  word-wrap: break-word;
+}
+
+.c0 >.category-link .product-title {
+  padding: 5px 0px;
+}
+
+.c0 >.category-link .product-description {
+  padding-bottom: 5px;
+  font-size: 0.7em;
+}
+
+@media only screen and (max-width:768px) {
+  .c0 >.category-link {
+    flex-basis: 90%;
+  }
+}
+
 <div>
   <div>
      
   </div>
   <div
-    class="products-list__ProductsListStyled-sc-kia2ms-0 gkdgQH"
+    class="c0"
   >
     <div
       class="category-link"
@@ -26,7 +108,7 @@ exports[`category page should render 1`] = `
           />
         </div>
         <div
-          class="accent-bar__AccentBarBase-sc-1nm9o64-0 accent-bar__AccentBarSlim-sc-1nm9o64-1 hRwmLQ dIekrv"
+          class="c1 c2"
         />
         <div
           class="product-title-container"
@@ -38,7 +120,7 @@ exports[`category page should render 1`] = `
           </p>
         </div>
         <div
-          class="accent-bar__AccentBarBase-sc-1nm9o64-0 accent-bar__AccentBarSlim-sc-1nm9o64-1 hRwmLQ dIekrv"
+          class="c1 c2"
         />
       </a>
     </div>

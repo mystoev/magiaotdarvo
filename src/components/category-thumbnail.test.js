@@ -14,24 +14,71 @@ describe('<CategoryThumbnail />', () => {
     );
 
     expect(container.firstChild).toMatchInlineSnapshot(`
+      .c2 {
+        width: 100%;
+        background-color: #EEC61F;
+        opacity: 0.5;
+      }
+
+      .c3 {
+        height: 1px;
+      }
+
+      .c1 {
+        height: 200px;
+      }
+
+      .c1 img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+      }
+
+      .c4 {
+        background-color: #1C1311;
+        padding: 0!important;
+        line-height: 1.2em;
+      }
+
+      .c5 {
+        background-color: #1C1311;
+        padding: 0!important;
+        font-size: 0.7em;
+        line-height: 1.5em;
+      }
+
+      .c0 {
+        flex-basis: 32%;
+        min-width: 200px;
+        min-height: 200px;
+        text-align: center;
+        box-shadow: 0px 0px 2px #1C1311;
+      }
+
+      @media only screen and (max-width:768px) {
+        .c0 {
+          flex-basis: 80%;
+        }
+      }
+
       <a
-        class="category-thumbnail__StyledLink-sc-vcs4ko-3 hnPeWm"
+        class="c0"
         href="/category/undefined"
       >
         <div
-          class="category-thumbnail__CategoryThumbnailStyled-sc-vcs4ko-0 iGqSaU"
+          class="c1"
         />
         <div
-          class="accent-bar__AccentBarBase-sc-1nm9o64-0 accent-bar__AccentBarSlim-sc-1nm9o64-1 hRwmLQ dIekrv"
+          class="c2 c3"
         />
         <p
-          class="category-thumbnail__ThumbTitle-sc-vcs4ko-1 jRVnGn"
+          class="c4"
         />
         <p
-          class="category-thumbnail__ThumbDescription-sc-vcs4ko-2 daVepy"
+          class="c5"
         />
         <div
-          class="accent-bar__AccentBarBase-sc-1nm9o64-0 accent-bar__AccentBarSlim-sc-1nm9o64-1 hRwmLQ dIekrv"
+          class="c2 c3"
         />
       </a>
     `);
@@ -45,32 +92,79 @@ describe('<CategoryThumbnail />', () => {
     );
 
     expect(container.firstChild).toMatchInlineSnapshot(`
+      .c2 {
+        width: 100%;
+        background-color: #EEC61F;
+        opacity: 0.5;
+      }
+
+      .c3 {
+        height: 1px;
+      }
+
+      .c1 {
+        height: 200px;
+      }
+
+      .c1 img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+      }
+
+      .c4 {
+        background-color: #1C1311;
+        padding: 0!important;
+        line-height: 1.2em;
+      }
+
+      .c5 {
+        background-color: #1C1311;
+        padding: 0!important;
+        font-size: 0.7em;
+        line-height: 1.5em;
+      }
+
+      .c0 {
+        flex-basis: 32%;
+        min-width: 200px;
+        min-height: 200px;
+        text-align: center;
+        box-shadow: 0px 0px 2px #1C1311;
+      }
+
+      @media only screen and (max-width:768px) {
+        .c0 {
+          flex-basis: 80%;
+        }
+      }
+
       <a
-        class="category-thumbnail__StyledLink-sc-vcs4ko-3 hnPeWm"
+        class="c0"
         href="/category/link"
       >
         <div
-          class="category-thumbnail__CategoryThumbnailStyled-sc-vcs4ko-0 iGqSaU"
+          class="c1"
         >
           <img
             src="svg"
           />
         </div>
         <div
-          class="accent-bar__AccentBarBase-sc-1nm9o64-0 accent-bar__AccentBarSlim-sc-1nm9o64-1 hRwmLQ dIekrv"
+          class="c2 c3"
         />
         <p
-          class="category-thumbnail__ThumbTitle-sc-vcs4ko-1 jRVnGn"
+          class="c4"
         >
           Нова категория
         </p>
         <p
-          class="category-thumbnail__ThumbDescription-sc-vcs4ko-2 daVepy"
+          class="c5"
         >
           За теста
         </p>
         <div
-          class="accent-bar__AccentBarBase-sc-1nm9o64-0 accent-bar__AccentBarSlim-sc-1nm9o64-1 hRwmLQ dIekrv"
+          class="c2 c3"
         />
       </a>
     `);

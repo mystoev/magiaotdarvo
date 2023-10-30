@@ -8,8 +8,18 @@ describe('<AccentBar />', () => {
     const { container } = renderWithTheme(<AccentBar />);
 
     expect(container.firstChild).toMatchInlineSnapshot(`
+      .c0 {
+        width: 100%;
+        background-color: #EEC61F;
+        opacity: 0.5;
+      }
+
+      .c1 {
+        height: 3px;
+      }
+
       <div
-        class="accent-bar__AccentBarBase-sc-1nm9o64-0 accent-bar__AccentBar-sc-1nm9o64-2 hRwmLQ fDJSZx"
+        class="c0 c1"
       />
     `);
   });
@@ -18,8 +28,18 @@ describe('<AccentBar />', () => {
     const { container } = renderWithTheme(<AccentBarSlim />);
 
     expect(container.firstChild).toMatchInlineSnapshot(`
+      .c0 {
+        width: 100%;
+        background-color: #EEC61F;
+        opacity: 0.5;
+      }
+
+      .c1 {
+        height: 1px;
+      }
+
       <div
-        class="accent-bar__AccentBarBase-sc-1nm9o64-0 accent-bar__AccentBarSlim-sc-1nm9o64-1 hRwmLQ dIekrv"
+        class="c0 c1"
       />
     `);
   });

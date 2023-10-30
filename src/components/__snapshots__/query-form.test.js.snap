@@ -1,9 +1,29 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<QueryForm /> should render 1`] = `
+.c0 {
+  margin: 50px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.c0 p {
+  max-width: 800px;
+  text-indent: 50px;
+  margin: 0px 20px;
+}
+
+.c0 input,
+.c0 textarea {
+  font-family: Verdana;
+  font-size: 0.8em;
+}
+
 <div>
   <div
-    class="query-form__QueryFormDefault-sc-5ca061-0 jdMxmZ"
+    class="c0"
   >
     <p>
       Изпрати запитване, като попълниш формата по-долу, след което ще получиш обаждане за детайли. Или директно се обади на телефон 0890932001.
@@ -57,9 +77,15 @@ exports[`<QueryForm /> should render 1`] = `
 `;
 
 exports[`<QueryForm /> should render as slim 1`] = `
+.c0 input,
+.c0 textarea {
+  font-family: Verdana;
+  font-size: 0.8em;
+}
+
 <div>
   <div
-    class="query-form__QueryFormSlim-sc-5ca061-1 bSSgJm"
+    class="c0"
   >
     <fieldset>
       <label>

@@ -14,6 +14,29 @@ describe('about page', () => {
     const { container } = renderWithTheme(<About />);
 
     expect(container).toMatchInlineSnapshot(`
+      .c1 {
+        max-width: 800px;
+        margin: auto;
+        margin-bottom: 50px;
+      }
+
+      .c1 p {
+        margin: 20px;
+        line-height: 1.5em;
+      }
+
+      .c1 h3 {
+        margin: 20px;
+      }
+
+      .c0 {
+        margin-top: 10px;
+      }
+
+      .c0 img {
+        width: 100%;
+      }
+
       <div>
         <div>
           За мен
@@ -21,14 +44,14 @@ describe('about page', () => {
           Моята история
         </div>
         <div
-          class="image-section__ImageContainer-sc-1qjyve1-0 jmhPHN"
+          class="c0"
         >
           <img
             src="[object Object]"
           />
         </div>
         <div
-          class="content__AboutContainer-sc-1x7u39y-0 kDTlao"
+          class="c1"
         >
           <p>
             Казвам се Димитранка Георгиева и споделям с вас, че съм подвластна на магията на дървото! Това, за някои може да звучи смешно, несериозно или налудничево, но за мен си е самата истина.

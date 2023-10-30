@@ -1,9 +1,35 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<SelectableImage /> tests should render 1`] = `
+.c0 {
+  position: relative;
+  display: inline-block;
+  height: 200px;
+  margin: 0 10px 10px 0;
+}
+
+.c0 .selectable-image {
+  height: 100%;
+}
+
+.c0 .selectable-image-overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: red;
+}
+
+.c0 .selectable-image-overlay.normal {
+  opacity: 0;
+}
+
+.c0 .selectable-image-overlay.hidden {
+  opacity: 0.6;
+}
+
 <div>
   <div
-    class="selectable-image__SelectableImageContainer-sc-1px0fdw-0 kQTPRI"
+    class="c0"
   >
     <div
       class="selectable-image-overlay normal"
@@ -17,9 +43,35 @@ exports[`<SelectableImage /> tests should render 1`] = `
 `;
 
 exports[`<SelectableImage /> tests should render with image 1`] = `
+.c0 {
+  position: relative;
+  display: inline-block;
+  height: 200px;
+  margin: 0 10px 10px 0;
+}
+
+.c0 .selectable-image {
+  height: 100%;
+}
+
+.c0 .selectable-image-overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: red;
+}
+
+.c0 .selectable-image-overlay.normal {
+  opacity: 0;
+}
+
+.c0 .selectable-image-overlay.hidden {
+  opacity: 0.6;
+}
+
 <div>
   <div
-    class="selectable-image__SelectableImageContainer-sc-1px0fdw-0 kQTPRI"
+    class="c0"
   >
     <div
       class="selectable-image-overlay normal"

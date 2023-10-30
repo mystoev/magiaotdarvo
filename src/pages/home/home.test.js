@@ -17,6 +17,32 @@ describe('home page', () => {
     const { container } = render(<Home />);
 
     expect(container).toMatchInlineSnapshot(`
+      .c0 {
+        margin-top: 10px;
+      }
+
+      .c0 img {
+        width: 100%;
+      }
+
+      .c1 {
+        margin: auto;
+        margin-bottom: 50px;
+        max-width: 1024px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .c1 h3 {
+        align-self: center;
+        margin: 40px;
+      }
+
+      .c1 p {
+        padding: 10px;
+      }
+
       <div>
         <div>
           Магия от дърво
@@ -24,14 +50,14 @@ describe('home page', () => {
           Авторски дърворезби и еко изделия от Диди Георгиева
         </div>
         <div
-          class="image-section__ImageContainer-sc-1qjyve1-0 jmhPHN"
+          class="c0"
         >
           <img
             src="[object Object]"
           />
         </div>
         <div
-          class="section__SectionStyled-sc-1q03sw9-0 fbZuCG"
+          class="c1"
         >
           <h3>
             ДОБРЕ ДОШЛИ В “ЦАРСТВОТО НА ДЪРВОТО“

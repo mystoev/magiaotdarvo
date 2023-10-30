@@ -8,9 +8,17 @@ describe('<ImageSection />', () => {
     const { container } = renderWithTheme(<ImageSection image={{}} />);
 
     expect(container).toMatchInlineSnapshot(`
+      .c0 {
+        margin-top: 10px;
+      }
+
+      .c0 img {
+        width: 100%;
+      }
+
       <div>
         <div
-          class="image-section__ImageContainer-sc-1qjyve1-0 jmhPHN"
+          class="c0"
         >
           <img
             src="[object Object]"

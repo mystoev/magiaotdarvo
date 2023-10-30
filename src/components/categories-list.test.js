@@ -25,38 +25,112 @@ describe('<CategoriesList />', () => {
     );
 
     expect(container.firstChild).toMatchInlineSnapshot(`
+      .c4 {
+        width: 100%;
+        background-color: #EEC61F;
+        opacity: 0.5;
+      }
+
+      .c5 {
+        height: 1px;
+      }
+
+      .c3 {
+        height: 200px;
+      }
+
+      .c3 img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+      }
+
+      .c6 {
+        background-color: #1C1311;
+        padding: 0!important;
+        line-height: 1.2em;
+      }
+
+      .c7 {
+        background-color: #1C1311;
+        padding: 0!important;
+        font-size: 0.7em;
+        line-height: 1.5em;
+      }
+
+      .c2 {
+        flex-basis: 32%;
+        min-width: 200px;
+        min-height: 200px;
+        text-align: center;
+        box-shadow: 0px 0px 2px #1C1311;
+      }
+
+      .c0 {
+        margin: auto;
+        margin-bottom: 50px;
+        max-width: 1024px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .c0 h3 {
+        align-self: center;
+        margin: 40px;
+      }
+
+      .c0 p {
+        padding: 10px;
+      }
+
+      .c1 {
+        margin-top: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-evenly;
+        gap: 20px;
+      }
+
+      @media only screen and (max-width:768px) {
+        .c2 {
+          flex-basis: 80%;
+        }
+      }
+
       <div
-        class="section__SectionStyled-sc-1q03sw9-0 fbZuCG"
+        class="c0"
       >
         <div
-          class="categories-list__CategoriesListStyled-sc-6xdcd1-0 dfxvRt"
+          class="c1"
         >
           <a
-            class="category-thumbnail__StyledLink-sc-vcs4ko-3 hnPeWm"
+            class="c2"
             href="/category/test-name"
           >
             <div
-              class="category-thumbnail__CategoryThumbnailStyled-sc-vcs4ko-0 iGqSaU"
+              class="c3"
             >
               <img
                 src="./images/test-name/cover.jpg"
               />
             </div>
             <div
-              class="accent-bar__AccentBarBase-sc-1nm9o64-0 accent-bar__AccentBarSlim-sc-1nm9o64-1 hRwmLQ dIekrv"
+              class="c4 c5"
             />
             <p
-              class="category-thumbnail__ThumbTitle-sc-vcs4ko-1 jRVnGn"
+              class="c6"
             >
               test-title
             </p>
             <p
-              class="category-thumbnail__ThumbDescription-sc-vcs4ko-2 daVepy"
+              class="c7"
             >
               test-description
             </p>
             <div
-              class="accent-bar__AccentBarBase-sc-1nm9o64-0 accent-bar__AccentBarSlim-sc-1nm9o64-1 hRwmLQ dIekrv"
+              class="c4 c5"
             />
           </a>
         </div>

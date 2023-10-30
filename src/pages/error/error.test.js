@@ -28,9 +28,35 @@ describe('error page', () => {
 
     expect(mockConsoleError).toHaveBeenCalled();
     expect(container).toMatchInlineSnapshot(`
+      .c0 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+      }
+
+      .c0 h3,
+      .c0 h4 {
+        margin-top: 30px;
+      }
+
+      .c0 code {
+        margin-top: 10px;
+        border: 1px solid rgba(100,100,100,0.1);
+        border-radius: 3px;
+        background-color: rgba(100,100,100,0.2);
+        padding: 10px 40px;
+        font-size: 0.7em;
+      }
+
+      .c0 .header-titles {
+        width: 100%;
+      }
+
       <div>
         <div
-          class="error__ErrorPageContainer-sc-jqcgqp-0 dSXBlL"
+          class="c0"
         >
           <div>
             Упс!
