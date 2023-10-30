@@ -3,24 +3,6 @@ import { createGlobalStyle } from 'styled-components';
 import Azbuki from '../../public/fonts/Azbuki-Regular.woff';
 
 export const Styles = createGlobalStyle`
-:root {
-  --main-background-color: #f3e5cf;
-  --secondary-background-color: #1c1311;
-  --tertiary-background-color: #c2b9b0;
-
-  --main-font-color: #1c1311;
-
-  --main-accent: #e7717d;
-  --secondary-accent: #eec61f;
-
-  --original-logo-color: #583023;
-}
-
-@font-face {
-  font-family: 'azbuki';
-  src: url(${Azbuki}) format('woff');
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -30,8 +12,8 @@ html,
 body {
   font-family: azbuki, Verdana, Geneva, Tahoma, sans-serif;
   font-size: 1.2em;
-  background-color: var(--main-background-color);
-  color: var(--main-font-color);
+  background-color: ${(props) => props.theme.colors.main};
+  color: ${(props) => props.theme.colors.second};
   height: 100%;
 }
 
@@ -43,12 +25,12 @@ body {
 }
 
 a {
-  color: var(--main-background-color);
+  color: ${(props) => props.theme.colors.main};
   text-decoration: none;
 }
 
 a:hover {
-  text-shadow: 0px 0px 10px var(--secondary-accent);
+  text-shadow: 0px 0px 10px ${(props) => props.theme.colors.secondaryAccent};
 }
 
 .button-default {
@@ -57,8 +39,8 @@ a:hover {
   font-size: 1em;
   font-weight: bold;
   font-family: azbuki;
-  background-color: var(--secondary-accent);
-  color: var(--secondary-background-color);
+  background-color: ${(props) => props.theme.colors.secondaryAccent};
+  color: ${(props) => props.theme.colors.second};
   padding: 15px 40px;
   cursor: pointer;
 
@@ -76,7 +58,7 @@ a:hover {
   font-weight: bold;
   font-family: azbuki;
   background-color: red;
-  color: var(--secondary-background-color);
+  color: ${(props) => props.theme.colors.second};
   padding: 15px 40px;
   cursor: pointer;
 
@@ -88,7 +70,7 @@ a:hover {
 }
 
 svg {
-  filter: drop-shadow(0px 0px 5px var(--secondary-accent));
+  filter: drop-shadow(0px 0px 5px ${(props) => props.theme.colors.secondaryAccent});
 }
 
 fieldset {
@@ -110,11 +92,11 @@ textarea {
   border-radius: 5px;
   font-size: 20px;
   font-family: azbuki;
-  color: var(--main-font-color);
-  box-shadow: 0px 0px 2px var(--secondary-background-color);
+  color: ${(props) => props.theme.colors.second};
+  box-shadow: 0px 0px 2px ${(props) => props.theme.colors.second};
 
   &:focus-visible {
-    outline: 2px solid var(--secondary-accent) !important;
+    outline: 2px solid ${(props) => props.theme.colors.secondaryAccent} !important;
   }
 }
 
@@ -128,7 +110,12 @@ textarea {
 
 input:focus-visible,
 textarea:focus-visible {
-  outline: 1px solid var(--secondary-background-color);
+  outline: 1px solid ${(props) => props.theme.colors.second};
+}
+
+@font-face {
+  font-family: 'azbuki';
+  src: url(${Azbuki}) format('woff');
 }
 
 @media only screen and (max-width: 768px) {

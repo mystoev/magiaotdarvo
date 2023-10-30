@@ -15,13 +15,13 @@ const CategoryThumbnailStyled = styled.div`
 `;
 
 const ThumbTitle = styled.p`
-  background-color: var(--secondary-background-color);
+  background-color: ${(props) => props.theme.colors.second};
   padding: 0 !important;
   line-height: 1.2em;
 `;
 
 const ThumbDescription = styled.p`
-  background-color: var(--secondary-background-color);
+  background-color: ${(props) => props.theme.colors.second};
   padding: 0 !important;
   font-size: 0.7em;
   line-height: 1.5em;
@@ -32,7 +32,7 @@ const StyledLink = styled(Link)`
   min-width: 200px;
   min-height: 200px;
   text-align: center;
-  box-shadow: 0px 0px 2px var(--secondary-background-color);
+  box-shadow: 0px 0px 2px ${(props) => props.theme.colors.second};
 
   @media only screen and (max-width: 768px) {
     flex-basis: 80%;

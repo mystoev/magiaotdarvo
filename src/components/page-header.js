@@ -10,7 +10,7 @@ const HeaderTitles = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: var(--secondary-background-color);
+  background-color: ${(props) => props.theme.colors.second};
 
   h1 {
     font-size: 3em;
@@ -22,8 +22,8 @@ const HeaderTitles = styled.div`
 
   h1,
   h2 {
-    color: var(--main-background-color);
-    text-shadow: 0px 0px 10px var(--secondary-accent);
+    color: ${(props) => props.theme.colors.main};
+    text-shadow: 0px 0px 10px ${(props) => props.theme.colors.accent};
     text-decoration: none;
     text-align: center;
   }

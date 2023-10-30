@@ -14,21 +14,21 @@ const ProductsListStyled = styled.div`
   > .category-link {
     text-align: center;
     flex-basis: 23%;
-    box-shadow: 0px 0px 2px var(--secondary-background-color);
+    box-shadow: 0px 0px 2px ${(props) => props.theme.colors.second};
 
     .product-title-container {
       flex-grow: 1;
       display: flex;
       flex-direction: column;
       justify-content: center;
-      background: var(--secondary-background-color);
+      background: ${(props) => props.theme.colors.second};
     }
 
     a {
       height: 100%;
       display: flex;
       flex-direction: column;
-      color: var(--secondary-accent);
+      color: ${(props) => props.theme.colors.accent};
     }
 
     .product-image-container {

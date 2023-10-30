@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 const AccentBarBase = styled.div`
   width: 100%;
-  background-color: var(--secondary-accent);
+  background-color: ${(props) => props.theme.colors.accent};
   opacity: 0.5;
 `;
 

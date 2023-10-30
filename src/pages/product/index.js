@@ -19,7 +19,7 @@ const ProductDetailsContaier = styled.div`
   .image-gallery-original-style {
     height: 640px;
     border-radius: 3px;
-    background-color: var(--main-font-color);
+    background-color: ${(props) => props.theme.colors.second});
 
     img {
       height: 100%;
@@ -45,7 +45,7 @@ const ProductDetailsContaier = styled.div`
   }
 
   a {
-    color: var(--main-font-color);
+    color: ${(props) => props.theme.colors.second};
   }
 
   .product-query-container {

@@ -14,7 +14,7 @@ const ContactsContainer = styled.div`
   }
 
   a {
-    color: var(--secondary-background-color);
+    color: ${(props) => props.theme.colors.second};
   }
 `;
 

@@ -10,7 +10,7 @@ const FileUpload = styled.div`
 
   .file-upload {
     text-align: center;
-    border: 5px dashed var(--secondary-accent);
+    border: 5px dashed ${(props) => props.theme.colors.accent};
     border-radius: 25px;
     padding: 1.5rem;
     position: relative;

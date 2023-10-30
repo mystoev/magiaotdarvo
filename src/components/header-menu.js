@@ -34,13 +34,13 @@ const MenuSmall = styled.div`
       display: flex;
       flex-direction: column;
       align-items: center;
-      background-color: var(--secondary-background-color);
-      border: 1px solid var(--main-background-color);
+      background-color: ${(props) => props.theme.colors.second};
+      border: 1px solid ${(props) => props.theme.colors.main};
       gap: 20px;
       z-index: 9;
 
       li {
-        border-bottom: 1px solid var(--main-background-color);
+        border-bottom: 1px solid ${(props) => props.theme.colors.main};
       }
     }
   }

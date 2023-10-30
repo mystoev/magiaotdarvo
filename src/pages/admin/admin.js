@@ -33,7 +33,7 @@ const AdminContainer = styled.div`
   .product-row {
     padding-top: 2px;
     padding-bottom: 2px;
-    border-top: 1px solid var(--secondary-background-color);
+    border-top: 1px solid ${(props) => props.theme.colors.second};
     display: flex;
     flex: 0 0 auto;
     gap: 10px;

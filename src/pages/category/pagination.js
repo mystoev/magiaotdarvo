@@ -16,7 +16,7 @@ const PaginationContainer = styled.div`
 
     li {
       list-style-type: none;
-      border: 1px solid var(--main-font-color);
+      border: 1px solid ${(props) => props.theme.colors.second};
       border-radius: 5px;
 
       &.disabled {
@@ -28,7 +28,7 @@ const PaginationContainer = styled.div`
       }
 
       a {
-        color: var(--main-font-color);
+        color: ${(props) => props.theme.colors.second};
         cursor: pointer;
         padding: 20px;
         line-height: 40px;
@@ -37,7 +37,7 @@ const PaginationContainer = styled.div`
   }
 
   .active-page {
-    background-color: var(--secondary-accent);
+    background-color: ${(props) => props.theme.colors.accent};
 
     a {
       cursor: default !important;

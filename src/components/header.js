@@ -10,7 +10,7 @@ const MenuHeader = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  background-color: var(--secondary-background-color);
+  background-color: ${(props) => props.theme.colors.second};
   margin-bottom: 10px;
 
   svg {

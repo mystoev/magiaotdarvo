@@ -15,7 +15,7 @@ const FooterContainer = styled.div`
     flex-direction: row;
     justify-content: center;
     justify-content: space-evenly;
-    background-color: var(--secondary-background-color);
+    background-color: ${(props) => props.theme.colors.second};
   }
 
   .footer-section {
@@ -24,14 +24,14 @@ const FooterContainer = styled.div`
     gap: 5px;
 
     h3 {
-      color: var(--main-background-color);
+      color: ${(props) => props.theme.colors.main};
       margin-bottom: 10px;
       text-decoration: underline;
     }
 
     p,
     a {
-      color: var(--main-background-color);
+      color: ${(props) => props.theme.colors.main};
 
       span {
         font-family: Verdana;
