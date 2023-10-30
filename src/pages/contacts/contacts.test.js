@@ -1,5 +1,5 @@
 import React from 'react';
-import { render } from '@testing-library/react';
+import { renderWithTheme } from '../../../test/utils';
 
 import Contacts from './';
 
@@ -13,7 +13,7 @@ jest.mock('../../components/query-form', () => () => <div>QueryForm</div>);
 
 describe('contacts page', () => {
   it('should render', () => {
-    const { container } = render(<Contacts />);
+    const { container } = renderWithTheme(<Contacts />);
 
     expect(container).toMatchInlineSnapshot(`
       <div>
@@ -22,7 +22,7 @@ describe('contacts page', () => {
            
         </div>
         <div
-          class="contacts__ContactsContainer-sc-bj40gk-0 gyvsjd"
+          class="contacts__ContactsContainer-sc-bj40gk-0 ceaQui"
         >
           <h2>
             Телефон

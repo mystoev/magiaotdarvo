@@ -6,7 +6,7 @@ exports[`category page should render 1`] = `
      
   </div>
   <div
-    class="category__ProductsList-sc-k6pwgm-0 eJvlnL"
+    class="products-list__ProductsListStyled-sc-kia2ms-0 gkdgQH"
   >
     <div
       class="category-link"
@@ -26,7 +26,7 @@ exports[`category page should render 1`] = `
           />
         </div>
         <div
-          class="accent-bar__AccentBarBase-sc-1nm9o64-0 accent-bar__AccentBarSlim-sc-1nm9o64-1 eYwklx dIekrv"
+          class="accent-bar__AccentBarBase-sc-1nm9o64-0 accent-bar__AccentBarSlim-sc-1nm9o64-1 hRwmLQ dIekrv"
         />
         <div
           class="product-title-container"
@@ -38,7 +38,7 @@ exports[`category page should render 1`] = `
           </p>
         </div>
         <div
-          class="accent-bar__AccentBarBase-sc-1nm9o64-0 accent-bar__AccentBarSlim-sc-1nm9o64-1 eYwklx dIekrv"
+          class="accent-bar__AccentBarBase-sc-1nm9o64-0 accent-bar__AccentBarSlim-sc-1nm9o64-1 hRwmLQ dIekrv"
         />
       </a>
     </div>

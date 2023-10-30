@@ -1,7 +1,7 @@
 import React from 'react';
-import { render } from '@testing-library/react';
 import { MemoryRouter as Router } from 'react-router-dom';
 
+import { renderWithTheme } from '../../../test/utils';
 import { useProduct } from '../../hooks/use-product';
 import Product from './';
 
@@ -32,7 +32,7 @@ jest.mock('../../components/page-header', () => ({ title, description }) => (
 
 describe('product page', () => {
   it('should render', () => {
-    const { container } = render(
+    const { container } = renderWithTheme(
       <Router>
         <Product />
       </Router>
@@ -46,7 +46,7 @@ describe('product page', () => {
             test-name
           </div>
           <div
-            class="product__ProductDetailsContaier-sc-1m2wwb4-0 eTlwoK"
+            class="product__ProductDetailsContaier-sc-1m2wwb4-0 dryWGx"
           >
             <div>
               ImageGallery
@@ -98,7 +98,7 @@ describe('product page', () => {
         images: ''
       }
     });
-    const { container } = render(
+    const { container } = renderWithTheme(
       <Router>
         <Product />
       </Router>
@@ -112,7 +112,7 @@ describe('product page', () => {
             test-name
           </div>
           <div
-            class="product__ProductDetailsContaier-sc-1m2wwb4-0 eTlwoK"
+            class="product__ProductDetailsContaier-sc-1m2wwb4-0 dryWGx"
           >
             <div>
               ImageGallery

@@ -1,5 +1,6 @@
 import React from 'react';
-import { fireEvent, render } from '@testing-library/react';
+import { fireEvent } from '@testing-library/react';
+import { renderWithTheme } from '../../../test/utils';
 import { MemoryRouter as Router } from 'react-router-dom';
 
 import { useProducts } from '../../hooks/use-products';
@@ -30,7 +31,7 @@ jest.mock('../../components/page-header', () => ({ title, description }) => (
 
 describe('category page', () => {
   it('should render', () => {
-    const { container } = render(
+    const { container } = renderWithTheme(
       <Router>
         <Category />
       </Router>
@@ -62,7 +63,7 @@ describe('category page', () => {
     useProducts.mockReturnValue({
       data: products
     });
-    const { queryByText } = render(
+    const { queryByText } = renderWithTheme(
       <Router>
         <Category />
       </Router>
@@ -79,7 +80,7 @@ describe('category page', () => {
       data: null
     });
 
-    render(
+    renderWithTheme(
       <Router>
         <Category />
       </Router>

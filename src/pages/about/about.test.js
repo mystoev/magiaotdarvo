@@ -1,5 +1,5 @@
 import React from 'react';
-import { render } from '@testing-library/react';
+import { renderWithTheme } from '../../../test/utils';
 
 import About from './';
 
@@ -11,7 +11,7 @@ jest.mock('../../components/page-header', () => ({ title, description }) => (
 
 describe('about page', () => {
   it('should render', () => {
-    const { container } = render(<About />);
+    const { container } = renderWithTheme(<About />);
 
     expect(container).toMatchInlineSnapshot(`
       <div>
