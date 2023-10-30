@@ -5,7 +5,7 @@ import ImageSection from './image-section';
 
 describe('<ImageSection />', () => {
   it('should render', () => {
-    const { container } = renderWithTheme(<ImageSection image={{}} />);
+    const { container } = renderWithTheme(<ImageSection image={'image-src'} />);
 
     expect(container).toMatchInlineSnapshot(`
       .c0 {
@@ -21,7 +21,7 @@ describe('<ImageSection />', () => {
           class="c0"
         >
           <img
-            src="[object Object]"
+            src="image-src"
           />
         </div>
       </div>
