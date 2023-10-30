@@ -9,6 +9,7 @@ jest.mock('react-router-dom', () => ({
   ...jest.requireActual('react-router-dom'),
   useNavigate: jest.fn()
 }));
+jest.mock('../../public/images', () => ({ FacebookIcon: 'fb-icon', InstagramIcon: 'insta-icon' }));
 
 describe('<Footer />', () => {
   it('should render', () => {
@@ -157,7 +158,7 @@ describe('<Footer />', () => {
               >
                 <img
                   class="social-icon"
-                  src="[object Object]"
+                  src="fb-icon"
                 />
                 <span>
                   Facebook
@@ -171,7 +172,7 @@ describe('<Footer />', () => {
               >
                 <img
                   class="social-icon"
-                  src="[object Object]"
+                  src="insta-icon"
                 />
                 <span>
                   Instagram

@@ -44,7 +44,7 @@ describe('category page', () => {
     const products = [];
     for (let index = 0; index < ITEMS_PER_PAGE; index++) {
       products.push({
-        folder: 'test-folder',
+        folder: `test-folder_${index}`,
         name: 'test-name',
         files: ['test-file1'],
         category: 'test-category',

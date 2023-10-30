@@ -11,6 +11,7 @@ jest.mock('../../components/page-header', () => ({ title, description }) => (
 
 jest.mock('../../components/categories-list', () => () => <div>CategoriesList</div>);
 jest.mock('../../components/query-form', () => () => <div>QueryForm</div>);
+jest.mock('../../../public/images', () => ({ HomeImage: 'home-img' }));
 
 describe('home page', () => {
   it('should render', () => {
@@ -53,7 +54,7 @@ describe('home page', () => {
           class="c0"
         >
           <img
-            src="[object Object]"
+            src="home-img"
           />
         </div>
         <div

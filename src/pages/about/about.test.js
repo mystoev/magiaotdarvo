@@ -3,6 +3,7 @@ import { renderWithTheme } from '../../../test/utils';
 
 import About from './';
 
+jest.mock('../../../public/images', () => ({ ChisselsImage: 'chissels-img' }));
 jest.mock('../../components/page-header', () => ({ title, description }) => (
   <div>
     {title} {description}
@@ -47,7 +48,7 @@ describe('about page', () => {
           class="c0"
         >
           <img
-            src="[object Object]"
+            src="chissels-img"
           />
         </div>
         <div
