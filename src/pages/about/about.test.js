@@ -28,7 +28,7 @@ describe('about page', () => {
           />
         </div>
         <div
-          class="about__AboutContainer-sc-oyqby8-0 oybrc"
+          class="content__AboutContainer-sc-1x7u39y-0 kDTlao"
         >
           <p>
             Казвам се Димитранка Георгиева и споделям с вас, че съм подвластна на магията на дървото! Това, за някои може да звучи смешно, несериозно или налудничево, но за мен си е самата истина.

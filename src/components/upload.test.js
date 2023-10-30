@@ -1,11 +1,12 @@
 import React from 'react';
-import { render, fireEvent, waitFor } from '@testing-library/react';
+import { fireEvent, waitFor } from '@testing-library/react';
+import { renderWithTheme } from '../../test/utils';
 
 import Upload from './upload';
 
 describe('<Upload /> tests', () => {
   it('should render', () => {
-    const { container } = render(<Upload />);
+    const { container } = renderWithTheme(<Upload />);
 
     expect(container).toMatchSnapshot();
   });
@@ -13,7 +14,7 @@ describe('<Upload /> tests', () => {
   it('should upload', async () => {
     const file = new File(['some content'], 'file1.jpg', { type: 'image/jpg' });
     const onUploadMock = jest.fn();
-    const { queryByTestId } = render(<Upload onUpload={onUploadMock} />);
+    const { queryByTestId } = renderWithTheme(<Upload onUpload={onUploadMock} />);
 
     fireEvent.change(queryByTestId('file-input'), { target: { files: [file] } });
 

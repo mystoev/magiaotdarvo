@@ -1,12 +1,12 @@
 import React from 'react';
 import { MemoryRouter as Router } from 'react-router';
-import { render } from '@testing-library/react';
+import { renderWithTheme } from '../../test/utils';
 
 import HeaderMenu from './header-menu';
 
 describe('<HeaderMenu />', () => {
   it('should render', () => {
-    const { container } = render(
+    const { container } = renderWithTheme(
       <Router>
         <HeaderMenu links={[]} />
       </Router>
@@ -21,7 +21,7 @@ describe('<HeaderMenu />', () => {
       { to: '/path2', text: 'Link2' }
     ];
 
-    const { container, queryByText } = render(
+    const { container, queryByText } = renderWithTheme(
       <Router>
         <HeaderMenu links={links} />
       </Router>

@@ -1,17 +1,18 @@
 import React from 'react';
-import { render, fireEvent } from '@testing-library/react';
+import { fireEvent } from '@testing-library/react';
+import { renderWithTheme } from '../../test/utils';
 
 import SelectableImage from './selectable-image';
 
 describe('<SelectableImage /> tests', () => {
   it('should render', () => {
-    const { container } = render(<SelectableImage />);
+    const { container } = renderWithTheme(<SelectableImage />);
 
     expect(container).toMatchSnapshot();
   });
 
   it('should render with image', () => {
-    const { container } = render(
+    const { container } = renderWithTheme(
       <SelectableImage category={'cat1'} productName={'name1'} file={'file1'} />
     );
 
@@ -20,7 +21,7 @@ describe('<SelectableImage /> tests', () => {
 
   it('should call onSelect when clicked', () => {
     const onSelectMock = jest.fn();
-    const { queryByRole } = render(
+    const { queryByRole } = renderWithTheme(
       <SelectableImage
         category={'cat1'}
         productName={'name1'}

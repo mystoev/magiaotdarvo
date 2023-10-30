@@ -1,5 +1,6 @@
 import React from 'react';
-import { fireEvent, render } from '@testing-library/react';
+import { fireEvent } from '@testing-library/react';
+import { renderWithTheme } from '../../test/utils';
 import { MemoryRouter as Router, useNavigate } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from 'react-query';
 
@@ -17,7 +18,7 @@ jest.mock('../hooks/use-send-email', () => ({
 describe('<QueryForm />', () => {
   const queryClient = new QueryClient();
   const renderQueryForm = (slim) =>
-    render(
+    renderWithTheme(
       <QueryClientProvider client={queryClient}>
         <Router>
           <QueryForm slim={slim} />

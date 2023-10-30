@@ -1,12 +1,12 @@
 import React from 'react';
-import { render } from '@testing-library/react';
+import { renderWithTheme } from '../../test/utils';
 import { MemoryRouter as Router } from 'react-router-dom';
 
 import Header from './header';
 
 describe('<Header /> tests', () => {
   it('should render', () => {
-    const { container } = render(
+    const { container } = renderWithTheme(
       <Router>
         <Header
           links={[
@@ -23,7 +23,7 @@ describe('<Header /> tests', () => {
     expect(container).toMatchInlineSnapshot(`
       <div>
         <div
-          class="header__MenuHeader-sc-1c6m008-0 gMaEOp"
+          class="header__MenuHeader-sc-1c6m008-0 hfSmRK"
         >
           <a
             href="/"
@@ -31,7 +31,7 @@ describe('<Header /> tests', () => {
             <svg />
           </a>
           <div
-            class="header-menu__MenuSmall-sc-1yxapcf-0 gTPzqw"
+            class="header-menu__MenuSmall-sc-1yxapcf-0 Oasdt"
           >
             <svg
               class="menu-icon"

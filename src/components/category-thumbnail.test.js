@@ -1,5 +1,5 @@
 import React from 'react';
-import { render } from '@testing-library/react';
+import { renderWithTheme } from '../../test/utils';
 import { MemoryRouter as Router } from 'react-router-dom';
 
 import { Logo } from '../../public/images';
@@ -7,7 +7,7 @@ import CategoryThumbnail from './category-thumbnail';
 
 describe('<CategoryThumbnail />', () => {
   it('should render', () => {
-    const { container } = render(
+    const { container } = renderWithTheme(
       <Router>
         <CategoryThumbnail />
       </Router>
@@ -15,30 +15,30 @@ describe('<CategoryThumbnail />', () => {
 
     expect(container.firstChild).toMatchInlineSnapshot(`
       <a
-        class="category-thumbnail__StyledLink-sc-vcs4ko-3 fpTIlN"
+        class="category-thumbnail__StyledLink-sc-vcs4ko-3 hnPeWm"
         href="/category/undefined"
       >
         <div
           class="category-thumbnail__CategoryThumbnailStyled-sc-vcs4ko-0 iGqSaU"
         />
         <div
-          class="accent-bar__AccentBarBase-sc-1nm9o64-0 accent-bar__AccentBarSlim-sc-1nm9o64-1 eYwklx dIekrv"
+          class="accent-bar__AccentBarBase-sc-1nm9o64-0 accent-bar__AccentBarSlim-sc-1nm9o64-1 hRwmLQ dIekrv"
         />
         <p
-          class="category-thumbnail__ThumbTitle-sc-vcs4ko-1 kLGgnU"
+          class="category-thumbnail__ThumbTitle-sc-vcs4ko-1 jRVnGn"
         />
         <p
-          class="category-thumbnail__ThumbDescription-sc-vcs4ko-2 jkwqjx"
+          class="category-thumbnail__ThumbDescription-sc-vcs4ko-2 daVepy"
         />
         <div
-          class="accent-bar__AccentBarBase-sc-1nm9o64-0 accent-bar__AccentBarSlim-sc-1nm9o64-1 eYwklx dIekrv"
+          class="accent-bar__AccentBarBase-sc-1nm9o64-0 accent-bar__AccentBarSlim-sc-1nm9o64-1 hRwmLQ dIekrv"
         />
       </a>
     `);
   });
 
   it('should render with props', () => {
-    const { container } = render(
+    const { container } = renderWithTheme(
       <Router>
         <CategoryThumbnail title="Нова категория" description={'За теста'} img={Logo} id={'link'} />
       </Router>
@@ -46,7 +46,7 @@ describe('<CategoryThumbnail />', () => {
 
     expect(container.firstChild).toMatchInlineSnapshot(`
       <a
-        class="category-thumbnail__StyledLink-sc-vcs4ko-3 fpTIlN"
+        class="category-thumbnail__StyledLink-sc-vcs4ko-3 hnPeWm"
         href="/category/link"
       >
         <div
@@ -57,20 +57,20 @@ describe('<CategoryThumbnail />', () => {
           />
         </div>
         <div
-          class="accent-bar__AccentBarBase-sc-1nm9o64-0 accent-bar__AccentBarSlim-sc-1nm9o64-1 eYwklx dIekrv"
+          class="accent-bar__AccentBarBase-sc-1nm9o64-0 accent-bar__AccentBarSlim-sc-1nm9o64-1 hRwmLQ dIekrv"
         />
         <p
-          class="category-thumbnail__ThumbTitle-sc-vcs4ko-1 kLGgnU"
+          class="category-thumbnail__ThumbTitle-sc-vcs4ko-1 jRVnGn"
         >
           Нова категория
         </p>
         <p
-          class="category-thumbnail__ThumbDescription-sc-vcs4ko-2 jkwqjx"
+          class="category-thumbnail__ThumbDescription-sc-vcs4ko-2 daVepy"
         >
           За теста
         </p>
         <div
-          class="accent-bar__AccentBarBase-sc-1nm9o64-0 accent-bar__AccentBarSlim-sc-1nm9o64-1 eYwklx dIekrv"
+          class="accent-bar__AccentBarBase-sc-1nm9o64-0 accent-bar__AccentBarSlim-sc-1nm9o64-1 hRwmLQ dIekrv"
         />
       </a>
     `);

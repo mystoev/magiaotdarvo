@@ -3,7 +3,7 @@
 exports[`<HeaderMenu /> should render 1`] = `
 <div>
   <div
-    class="header-menu__MenuSmall-sc-1yxapcf-0 gTPzqw"
+    class="header-menu__MenuSmall-sc-1yxapcf-0 Oasdt"
   >
     <svg
       class="menu-icon"
@@ -18,7 +18,7 @@ exports[`<HeaderMenu /> should render 1`] = `
 exports[`<HeaderMenu /> should render with links 1`] = `
 <div>
   <div
-    class="header-menu__MenuSmall-sc-1yxapcf-0 gTPzqw"
+    class="header-menu__MenuSmall-sc-1yxapcf-0 Oasdt"
   >
     <svg
       class="menu-icon"

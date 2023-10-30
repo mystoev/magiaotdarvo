@@ -1,5 +1,6 @@
 import React from 'react';
-import { render, fireEvent } from '@testing-library/react';
+import { fireEvent } from '@testing-library/react';
+import { renderWithTheme } from '../../test/utils';
 import { MemoryRouter as Router, useNavigate } from 'react-router-dom';
 
 import Footer from './footer';
@@ -11,7 +12,7 @@ jest.mock('react-router-dom', () => ({
 
 describe('<Footer />', () => {
   it('should render', () => {
-    const { container } = render(
+    const { container } = renderWithTheme(
       <Router>
         <Footer />
       </Router>
@@ -20,10 +21,10 @@ describe('<Footer />', () => {
     expect(container).toMatchInlineSnapshot(`
       <div>
         <div
-          class="footer__FooterContainer-sc-1cza4xd-0 flkUrT"
+          class="footer__FooterContainer-sc-1cza4xd-0 kSLTYW"
         >
           <div
-            class="accent-bar__AccentBarBase-sc-1nm9o64-0 accent-bar__AccentBar-sc-1nm9o64-2 eYwklx fDJSZx"
+            class="accent-bar__AccentBarBase-sc-1nm9o64-0 accent-bar__AccentBar-sc-1nm9o64-2 hRwmLQ fDJSZx"
           />
           <div
             class="footer"
@@ -133,7 +134,7 @@ describe('<Footer />', () => {
     const mockNavigate = jest.fn();
     useNavigate.mockReturnValue(mockNavigate);
 
-    const { queryByText } = render(
+    const { queryByText } = renderWithTheme(
       <Router>
         <Footer />
       </Router>

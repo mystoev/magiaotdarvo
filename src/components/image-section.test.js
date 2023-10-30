@@ -1,11 +1,11 @@
 import React from 'react';
-import { render } from '@testing-library/react';
+import { renderWithTheme } from '../../test/utils';
 
 import ImageSection from './image-section';
 
 describe('<ImageSection />', () => {
   it('should render', () => {
-    const { container } = render(<ImageSection image={{}} />);
+    const { container } = renderWithTheme(<ImageSection image={{}} />);
 
     expect(container).toMatchInlineSnapshot(`
       <div>

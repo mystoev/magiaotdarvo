@@ -1,19 +1,19 @@
 import React from 'react';
-import { render } from '@testing-library/react';
+import { renderWithTheme } from '../../test/utils';
 
 import FAQ from './faq';
 
 describe('<FAQ />', () => {
   it('should render', () => {
-    const { container } = render(<FAQ />);
+    const { container } = renderWithTheme(<FAQ />);
 
     expect(container).toMatchInlineSnapshot(`
       <div>
         <div
-          class="accent-bar__AccentBarBase-sc-1nm9o64-0 accent-bar__AccentBar-sc-1nm9o64-2 eYwklx fDJSZx"
+          class="accent-bar__AccentBarBase-sc-1nm9o64-0 accent-bar__AccentBar-sc-1nm9o64-2 hRwmLQ fDJSZx"
         />
         <div
-          class="page-header__HeaderTitles-sc-1ejvrf1-0 gErLqz"
+          class="page-header__HeaderTitles-sc-1ejvrf1-0 jqhYHF"
         >
           <h1>
             ЧЕСТО ЗАДАВАНИ ВЪПРОСИ
@@ -23,7 +23,7 @@ describe('<FAQ />', () => {
           </h2>
         </div>
         <div
-          class="accent-bar__AccentBarBase-sc-1nm9o64-0 accent-bar__AccentBar-sc-1nm9o64-2 eYwklx fDJSZx"
+          class="accent-bar__AccentBarBase-sc-1nm9o64-0 accent-bar__AccentBar-sc-1nm9o64-2 hRwmLQ fDJSZx"
         />
         <div
           class="faq__FAQContainer-sc-1xuqxwm-0 eDpewO"
