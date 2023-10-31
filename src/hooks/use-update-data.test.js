@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 import { useUpdateData, useAddData } from './use-update-data';
-import { ADD_FILE, UPDATE_FILE, LOCAL_SERVER } from '../constants/data';
+import { ADD_FILE, UPDATE_FILE, LOCAL_SERVER } from '../constants';
 
 jest.mock('axios');
 

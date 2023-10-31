@@ -1,4 +1,4 @@
-import { UPDATE_FILE, ADD_FILE, UPLOAD_FILE, IS_PROD, LOCAL_SERVER } from '../constants/data';
+import { UPDATE_FILE, ADD_FILE, UPLOAD_FILE, IS_PROD, LOCAL_SERVER } from '../constants';
 import axios from 'axios';
 import { selectToken } from '../selectors/token';
 

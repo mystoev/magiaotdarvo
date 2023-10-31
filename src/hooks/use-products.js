@@ -1,7 +1,7 @@
 import { useQuery } from 'react-query';
 import axios from 'axios';
 
-import { IS_PROD, PRODUCTS_PHP, LOCAL_SERVER } from '../constants/data';
+import { IS_PROD, PRODUCTS_PHP, LOCAL_SERVER } from '../constants';
 
 const getProducts = async (categoryName) => {
   const endpoint = IS_PROD ? PRODUCTS_PHP : LOCAL_SERVER + PRODUCTS_PHP;

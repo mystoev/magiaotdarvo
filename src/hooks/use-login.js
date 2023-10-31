@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import axios from 'axios';
 
-import { LOGIN_FILE } from '../constants/data';
+import { LOGIN_FILE } from '../constants';
 
 export const login = async (user, password) => {
   try {

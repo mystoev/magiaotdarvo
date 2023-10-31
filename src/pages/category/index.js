@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 
 import { useProducts } from '../../hooks';
-import { CATEGORIES_MAP } from '../../constants/data';
+import { CATEGORIES_MAP } from '../../constants';
 import { PageHeader } from '../../components';
 import { Thumbnail } from './thumbnail';
 import { Pagination } from './pagination';

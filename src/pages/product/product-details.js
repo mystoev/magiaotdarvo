@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
-import { CATEGORIES_MAP } from '../../constants/data';
+import { CATEGORIES_MAP } from '../../constants';
 
 export const ProductDetails = ({ product: { name, description }, category }) => (
   <div>

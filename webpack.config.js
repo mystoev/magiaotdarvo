@@ -15,7 +15,7 @@ const {
   PRODUCT_PHP,
   PHP_FOLDER,
   UPLOAD_FILE
-} = require('./src/constants/data');
+} = require('./src/constants');
 
 module.exports = (env) => {
   return {

@@ -5,7 +5,7 @@ import styled from 'styled-components';
 
 import { useProduct } from '../../hooks';
 import { PageHeader } from '../../components';
-import { CATEGORIES_MAP, WEBSITE } from '../../constants/data';
+import { CATEGORIES_MAP, WEBSITE } from '../../constants';
 import { selectCarouselImages } from '../../selectors/image';
 import { ProductQueryContainer } from './product-query';
 import { Carousel } from './carousel';

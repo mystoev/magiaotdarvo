@@ -1,5 +1,5 @@
 import { isEmpty } from 'lodash';
-import { WEBSITE } from '../constants/data';
+import { WEBSITE } from '../constants';
 
 export const imageHref = (category, productName, fileName) => {
   if (isEmpty(category) || isEmpty(productName) || isEmpty(fileName)) {
