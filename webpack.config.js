@@ -4,18 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin');
 
-const {
-  EMAIL_FILE,
-  UPDATE_FILE,
-  LOGIN_FILE,
-  ADD_FILE,
-  FUNCTIONS_FILE,
-  CATEGORIES_PHP,
-  PRODUCTS_PHP,
-  PRODUCT_PHP,
-  PHP_FOLDER,
-  UPLOAD_FILE
-} = require('./src/constants');
+const { PHP_FOLDER } = require('./src/constants');
 
 module.exports = (env) => {
   return {
@@ -68,17 +57,7 @@ module.exports = (env) => {
         template: path.join(__dirname, 'public', 'index.html')
       }),
       new CopyPlugin({
-        patterns: [
-          { from: path.join(__dirname, PHP_FOLDER, EMAIL_FILE) },
-          { from: path.join(__dirname, PHP_FOLDER, UPDATE_FILE) },
-          { from: path.join(__dirname, PHP_FOLDER, LOGIN_FILE) },
-          { from: path.join(__dirname, PHP_FOLDER, ADD_FILE) },
-          { from: path.join(__dirname, PHP_FOLDER, FUNCTIONS_FILE) },
-          { from: path.join(__dirname, PHP_FOLDER, CATEGORIES_PHP) },
-          { from: path.join(__dirname, PHP_FOLDER, PRODUCTS_PHP) },
-          { from: path.join(__dirname, PHP_FOLDER, PRODUCT_PHP) },
-          { from: path.join(__dirname, PHP_FOLDER, UPLOAD_FILE) }
-        ]
+        patterns: [{ from: path.join(__dirname, PHP_FOLDER), to: '.' }]
       })
     ],
     optimization: {

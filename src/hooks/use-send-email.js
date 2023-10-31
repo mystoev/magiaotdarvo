@@ -1,8 +1,9 @@
 import { useMutation } from 'react-query';
 import axios from 'axios';
 
-import { EMAIL_FILE } from '../constants';
 import { selectToken } from '../selectors/token';
+
+export const EMAIL_FILE = 'email.php';
 
 const sendEmail = async ({ name, email, phone, message, productLink }) => {
   const token = selectToken();

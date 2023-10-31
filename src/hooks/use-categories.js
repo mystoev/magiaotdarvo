@@ -1,8 +1,9 @@
 import { useQuery } from 'react-query';
 import axios from 'axios';
 
-import { IS_PROD, CATEGORIES_PHP, LOCAL_SERVER } from '../constants';
+import { IS_PROD, LOCAL_SERVER } from '../constants';
 
+const CATEGORIES_PHP = 'categories.php';
 const CATEGORIES_KEY = 'categories';
 
 const getCategories = async () => {

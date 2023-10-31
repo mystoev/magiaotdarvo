@@ -16,8 +16,7 @@ describe('use-update-data', () => {
       productName: 'notebook-caption',
       newProductName: 'test-product',
       description: 'test-description',
-      imagesColumn: 'cover.jpg,new_image.jpg',
-      images: []
+      imagesColumn: 'cover.jpg,new_image.jpg'
     };
 
     const data = await useUpdateData(updateParams);
@@ -36,8 +35,7 @@ describe('use-update-data', () => {
       productName: 'earings-ethno',
       newProductName: 'test-product',
       description: 'test-description',
-      imagesColumn: 'new_image.jpg',
-      images: [{ name: 'test.jpg' }]
+      imagesColumn: 'new_image.jpg'
     };
 
     const data = await useUpdateData(updateParams);

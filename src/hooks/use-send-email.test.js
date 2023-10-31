@@ -4,7 +4,7 @@ import { renderHook, waitFor } from '@testing-library/react';
 import { QueryClient, QueryClientProvider } from 'react-query';
 
 import { useSendEmail } from './use-send-email';
-import { EMAIL_FILE } from '../constants';
+import { EMAIL_FILE } from './use-send-email';
 
 jest.mock('axios');
 
