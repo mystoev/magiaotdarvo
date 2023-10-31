@@ -12,8 +12,7 @@ import {
   CategoryPage,
   EmailSent
 } from './pages';
-import { ProtectedRoute, Login, Admin, EditProduct } from './pages/admin';
-import AddProduct from './pages/admin/add-product';
+import { ProtectedRoute, Login, Admin, EditProduct, AddProduct } from './pages/admin';
 
 export const routes = [
   {

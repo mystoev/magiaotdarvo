@@ -5,6 +5,7 @@ import styled from 'styled-components';
 
 import { AccentBarSlim } from '../../components';
 import { imageHref } from '../../selectors/image';
+import { New } from '../../../public/images';
 
 const CategoryLink = styled.div`
   text-align: center;
@@ -57,16 +58,19 @@ const ProductImage = styled.div`
   }
 `;
 
-export const Thumbnail = ({ data, category }) => {
-  const file = data.images.split(',').find((f) => f.indexOf('cover') > -1);
-  const imgHref = imageHref(category, data.folder, file);
+//TODO: Refactor
+export const Thumbnail = ({ data, category, link }) => {
+  const file = data.images?.split(',').find((f) => f.indexOf('cover') > -1);
+  const imgSrc = data.images ? imageHref(category, data?.folder, file) : New;
+
+  const to = link ?? `/product/${category}/${data.folder}`;
 
   return (
     <CategoryLink>
-      <Link to={`/product/${category}/${data.folder}`}>
+      <Link to={to}>
         <ProductImage>
-          <img className="image-cover" src={imgHref} />
-          <img src={imgHref} />
+          <img className="image-cover" src={imgSrc} />
+          <img src={imgSrc} />
         </ProductImage>
         <AccentBarSlim />
         <ProductTitleContainer>
@@ -80,5 +84,6 @@ export const Thumbnail = ({ data, category }) => {
 
 Thumbnail.propTypes = {
   data: PropTypes.object,
-  category: PropTypes.string
+  category: PropTypes.string,
+  link: PropTypes.string
 };

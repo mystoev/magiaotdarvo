@@ -1,11 +1,10 @@
 import React, { useReducer } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 
-import { EditContainer } from './edit-container';
+import { EditContainer, addProductReducer } from '.';
 import { Upload, DefaultButton } from '../../components';
 import { useAddData } from '../../hooks';
 import { CATEGORIES_MAP } from '../../constants';
-import { addProductReducer } from './reducers';
 import { NAME_CHANGE, DESCRIPTION_CHANGE, IMAGES_CHANGE } from './constants';
 
 const AddProduct = () => {

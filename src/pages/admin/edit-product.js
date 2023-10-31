@@ -1,11 +1,10 @@
 import React, { useEffect, useReducer } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 
-import { EditContainer } from './edit-container';
+import { EditContainer, editProductReducer } from '.';
 import { Upload, DefaultButton } from '../../components';
 import SelectableImage from '../../components/selectable-image';
 import { useProduct, useUpdateData, useUploadImages } from '../../hooks';
-import { editProductReducer } from './reducers';
 import {
   NAME_CHANGE,
   DESCRIPTION_CHANGE,

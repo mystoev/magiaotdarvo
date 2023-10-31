@@ -8,6 +8,9 @@ import { ITEMS_PER_PAGE } from './use-products-paging';
 import { useProducts } from '../../hooks/use-products';
 import { renderWithTheme } from '../../../test/utils';
 
+jest.mock('../../../public/images', () => ({
+  New: ''
+}));
 jest.mock('react-router-dom', () => ({
   ...jest.requireActual('react-router-dom'),
   useParams: jest.fn().mockReturnValue({ id: 'test-product' })
