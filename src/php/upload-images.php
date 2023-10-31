@@ -15,7 +15,8 @@ function update()
       return false;
     }
 
-    update_product($payload);
+    // update_product($payload);
+    writeNewImages($payload, $payload['productName']);
 
     return true;
   } catch (Exception $e) {

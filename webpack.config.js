@@ -13,7 +13,8 @@ const {
   CATEGORIES_PHP,
   PRODUCTS_PHP,
   PRODUCT_PHP,
-  PHP_FOLDER
+  PHP_FOLDER,
+  UPLOAD_FILE
 } = require('./src/constants/data');
 
 module.exports = (env) => {
@@ -75,7 +76,8 @@ module.exports = (env) => {
           { from: path.join(__dirname, PHP_FOLDER, FUNCTIONS_FILE) },
           { from: path.join(__dirname, PHP_FOLDER, CATEGORIES_PHP) },
           { from: path.join(__dirname, PHP_FOLDER, PRODUCTS_PHP) },
-          { from: path.join(__dirname, PHP_FOLDER, PRODUCT_PHP) }
+          { from: path.join(__dirname, PHP_FOLDER, PRODUCT_PHP) },
+          { from: path.join(__dirname, PHP_FOLDER, UPLOAD_FILE) }
         ]
       })
     ],

@@ -118,7 +118,7 @@ function update_product($payload)
   $description = $payload['description'];
   $productName = $payload['productName'];
   $images = $payload['imagesColumn'];
-  $stmt = $conn->prepare("UPDATE " . $category . " SET name=?, description=?, images=? WHERE name=?");
+  $stmt = $conn->prepare("UPDATE " . $category . " SET name=?, description=?, images=? WHERE images_folder=?");
   $stmt->bind_param("ssss", $newProductName, $description, $images, $productName);
 
   $stmt->execute();

@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import Upload from '../../components/upload';
 import SelectableImage from '../../components/selectable-image';
 import { useProduct } from '../../hooks/use-product';
-import { useUpdateData } from '../../hooks/use-update-data';
+import { useUpdateData, useUploadImages } from '../../hooks/use-update-data';
 import { editProductReducer } from './reducers';
 import {
   NAME_CHANGE,
@@ -19,11 +19,6 @@ const EditContainer = styled.div`
   width: 800px;
   margin: auto;
   padding-bottom: 50px;
-
-  .images-container {
-    display: flex;
-    flex-wrap: wrap;
-  }
 
   @media only screen and (max-width: 768px) {
     font-size: 0.75em;
@@ -99,8 +94,7 @@ const EditProduct = () => {
       productName,
       newProductName: state.name,
       description: state.description,
-      imagesColumn: fileNames.join(','),
-      images: state.newFiles
+      imagesColumn: fileNames.join(',')
     });
 
     navigate('/admin');
@@ -149,8 +143,13 @@ const EditProduct = () => {
       <br />
       <h2>Нови снимки</h2>
       <Upload
-        onUpload={(files) => {
+        onUpload={async (files) => {
           dispatch({ type: NEW_FILE_CHANGE, payload: files });
+          await useUploadImages({
+            category,
+            productName,
+            images: files
+          });
         }}
       />
       <button className="button-default" onClick={handleSave}>

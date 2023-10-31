@@ -6,6 +6,7 @@ module.exports = {
   EMAIL_FILE: 'email.php',
   LOGIN_FILE: 'login.php',
   UPDATE_FILE: 'update.php',
+  UPLOAD_FILE: 'upload-images.php',
   ADD_FILE: 'add.php',
   FUNCTIONS_FILE: 'functions.php',
   CATEGORIES_DATA_KEY: 'categoryData',
