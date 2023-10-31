@@ -1,10 +1,12 @@
 import React from 'react';
 import { fireEvent } from '@testing-library/react';
-import { renderWithTheme } from '../../../test/utils';
+
 import { MemoryRouter as Router } from 'react-router-dom';
 
+import Category from './';
+import { ITEMS_PER_PAGE } from './use-products-paging';
 import { useProducts } from '../../hooks/use-products';
-import Category, { ITEMS_PER_PAGE } from './';
+import { renderWithTheme } from '../../../test/utils';
 
 jest.mock('react-router-dom', () => ({
   ...jest.requireActual('react-router-dom'),

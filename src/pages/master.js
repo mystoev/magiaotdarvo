@@ -1,10 +1,10 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
-
-import { useScrollTop } from '../hooks';
 import CookieConsent from 'react-cookie-consent';
-import { Header, Footer } from '../components';
+
 import { Styles } from './styles';
+import { useScrollTop } from '../hooks';
+import { Header, Footer } from '../components';
 
 const Master = () => {
   useScrollTop();

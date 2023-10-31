@@ -1,6 +1,24 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<QueryForm /> should render 1`] = `
+.c1 {
+  border: 0px;
+  border-radius: 3px;
+  font-size: 1em;
+  font-weight: bold;
+  font-family: azbuki;
+  background-color: #EEC61F;
+  color: #1C1311;
+  padding: 15px 40px;
+  cursor: pointer;
+}
+
+.c1:disabled {
+  background-color: grey;
+  opacity: 0.5;
+  cursor: auto;
+}
+
 .c0 {
   margin: 50px 0px;
   display: flex;
@@ -19,6 +37,13 @@ exports[`<QueryForm /> should render 1`] = `
 .c0 textarea {
   font-family: Verdana;
   font-size: 0.8em;
+}
+
+@media only screen and (max-width:768px) {
+  .c1 {
+    padding: 10px;
+    white-space: nowrap;
+  }
 }
 
 <div>
@@ -67,7 +92,7 @@ exports[`<QueryForm /> should render 1`] = `
       />
     </fieldset>
     <button
-      class="button-default"
+      class="c1"
       disabled=""
     >
       Изпрати
@@ -77,10 +102,35 @@ exports[`<QueryForm /> should render 1`] = `
 `;
 
 exports[`<QueryForm /> should render as slim 1`] = `
+.c1 {
+  border: 0px;
+  border-radius: 3px;
+  font-size: 1em;
+  font-weight: bold;
+  font-family: azbuki;
+  background-color: #EEC61F;
+  color: #1C1311;
+  padding: 15px 40px;
+  cursor: pointer;
+}
+
+.c1:disabled {
+  background-color: grey;
+  opacity: 0.5;
+  cursor: auto;
+}
+
 .c0 input,
 .c0 textarea {
   font-family: Verdana;
   font-size: 0.8em;
+}
+
+@media only screen and (max-width:768px) {
+  .c1 {
+    padding: 10px;
+    white-space: nowrap;
+  }
 }
 
 <div>
@@ -126,7 +176,7 @@ exports[`<QueryForm /> should render as slim 1`] = `
       />
     </fieldset>
     <button
-      class="button-default"
+      class="c1"
       disabled=""
     >
       Изпрати

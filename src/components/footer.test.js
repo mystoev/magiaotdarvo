@@ -30,11 +30,37 @@ describe('<Footer />', () => {
         height: 3px;
       }
 
+      .c5 {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+      }
+
+      .c5 >span {
+        font-size: 0.8em;
+      }
+
+      .c5 >img {
+        width: 24px;
+        height: 24px;
+      }
+
+      .c6 {
+        display: block;
+        font-size: 0.6em;
+        line-height: 1.4em;
+        text-align: center;
+      }
+
+      .c6 span {
+        font-family: Verdana;
+      }
+
       .c0 {
         margin-top: auto;
       }
 
-      .c0 .footer {
+      .c3 {
         padding: 20px 0px;
         display: flex;
         flex-direction: row;
@@ -43,53 +69,27 @@ describe('<Footer />', () => {
         background-color: #1C1311;
       }
 
-      .c0 .footer-section {
+      .c4 {
         display: flex;
         flex-direction: column;
         gap: 5px;
       }
 
-      .c0 .footer-section h3 {
+      .c4 h3 {
         color: #F3E5CF;
         margin-bottom: 10px;
         text-decoration: underline;
       }
 
-      .c0 .footer-section p,
-      .c0 .footer-section a {
+      .c4 p,
+      .c4 a {
         color: #F3E5CF;
       }
 
-      .c0 .footer-section p span,
-      .c0 .footer-section a span {
+      .c4 p span,
+      .c4 a span {
         font-family: Verdana;
         font-size: 0.8em;
-      }
-
-      .c0 .footer-section .social-link {
-        display: flex;
-        align-items: center;
-        gap: 5px;
-      }
-
-      .c0 .footer-section .social-link span {
-        font-size: 0.8em;
-      }
-
-      .c0 .footer-section .social-icon {
-        width: 24px;
-        height: 24px;
-      }
-
-      .c0 .copyright {
-        display: block;
-        font-size: 0.6em;
-        line-height: 1.4em;
-        text-align: center;
-      }
-
-      .c0 .copyright span {
-        font-family: Verdana;
       }
 
       @media only screen and (max-width:768px) {
@@ -97,8 +97,10 @@ describe('<Footer />', () => {
           flex-direction: column;
           gap: 30px;
         }
+      }
 
-        .c0 .footer-section {
+      @media only screen and (max-width:768px) {
+        .c4 {
           align-items: center;
           text-align: center;
         }
@@ -112,10 +114,10 @@ describe('<Footer />', () => {
             class="c1 c2"
           />
           <div
-            class="footer"
+            class="c3"
           >
             <div
-              class="footer-section"
+              class="c4"
             >
               <h3>
                 Контакти
@@ -134,30 +136,28 @@ describe('<Footer />', () => {
               </p>
               <p>
                 Имейл:
-                 
                 <span>
                   <a
                     href="mailto:magiaotdarvo@gmail.com"
                   >
-                    magiaotdarvo@gmail.com
+                     magiaotdarvo@gmail.com
                   </a>
                 </span>
               </p>
             </div>
             <div
-              class="footer-section"
+              class="c4"
             >
               <h3>
                 Социални мрежи
               </h3>
               <a
-                class="social-link"
+                class="c5"
                 href="https://www.facebook.com/profile.php?id=100048409279352"
                 rel="noreferrer"
                 target="_blank"
               >
                 <img
-                  class="social-icon"
                   src="fb-icon"
                 />
                 <span>
@@ -165,13 +165,12 @@ describe('<Footer />', () => {
                 </span>
               </a>
               <a
-                class="social-link"
+                class="c5"
                 href="https://www.instagram.com/magiaotdarvo/"
                 rel="noreferrer"
                 target="_blank"
               >
                 <img
-                  class="social-icon"
                   src="insta-icon"
                 />
                 <span>
@@ -180,7 +179,7 @@ describe('<Footer />', () => {
               </a>
             </div>
             <div
-              class="footer-section"
+              class="c4"
             >
               <h3>
                 ЧЗВ
@@ -203,12 +202,14 @@ describe('<Footer />', () => {
             </div>
           </div>
           <div
-            class="copyright"
+            class="c6"
           >
             <span>
               ©
             </span>
-             2022 Магия от дърво. Всички права запазени.
+             
+            2023
+             Магия от дърво. Всички права запазени.
           </div>
         </div>
       </div>
