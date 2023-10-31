@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 
 import { useSendEmail } from '../hooks/use-send-email';
+import { DefaultButton } from '.';
 
 const QueryFormDefault = styled.div`
   margin: 50px 0px;
@@ -91,8 +92,7 @@ const QueryFormContent = ({ slim, productLink = null }) => {
           value={state.message}
           onChange={(e) => setState({ ...state, message: e.target.value })}></textarea>
       </fieldset>
-      <button
-        className="button-default"
+      <DefaultButton
         onClick={() => mutate({ ...state, productLink })}
         disabled={
           _.isEmpty('state.name') ||
@@ -101,7 +101,7 @@ const QueryFormContent = ({ slim, productLink = null }) => {
           _.isEmpty(state.message)
         }>
         Изпрати
-      </button>
+      </DefaultButton>
     </>
   );
 };

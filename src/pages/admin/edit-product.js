@@ -2,7 +2,7 @@ import React, { useEffect, useReducer } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import styled from 'styled-components';
 
-import Upload from '../../components/upload';
+import { Upload, DefaultButton } from '../../components';
 import SelectableImage from '../../components/selectable-image';
 import { useProduct } from '../../hooks/use-product';
 import { useUpdateData, useUploadImages } from '../../hooks/use-update-data';
@@ -152,9 +152,7 @@ const EditProduct = () => {
           });
         }}
       />
-      <button className="button-default" onClick={handleSave}>
-        Запази промените
-      </button>
+      <DefaultButton onClick={handleSave}>Запази промените</DefaultButton>
     </EditContainer>
   );
 };

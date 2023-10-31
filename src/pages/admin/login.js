@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-import { Header } from '../../components';
+import { Header, DefaultButton } from '../../components';
 import { login } from '../../hooks/use-login';
 
 const AdminLogin = styled.div`
@@ -56,9 +56,7 @@ const Login = ({ setToken }) => {
             onChange={(e) => setState({ ...state, password: e.target.value })}
           />
         </fieldset>
-        <button className="button-default" onClick={handleLogin}>
-          Влез
-        </button>
+        <DefaultButton onClick={handleLogin}>Влез</DefaultButton>
         {state.error && <h2>{state.error}</h2>}
       </AdminLogin>
     </>

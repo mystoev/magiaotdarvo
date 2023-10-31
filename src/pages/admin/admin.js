@@ -8,6 +8,7 @@ import 'react-tabs/style/react-tabs.css';
 import { imageHref } from '../../selectors/image';
 import { useCategories } from '../../hooks/use-categories';
 import { useProducts } from '../../hooks/use-products';
+import { DefaultButton } from '../../components';
 
 const AdminContainer = styled.div`
   margin: 20px;
@@ -62,11 +63,6 @@ const AdminContainer = styled.div`
   @media only screen and (max-width: 768px) {
     margin: 10px;
     font-size: 0.8em;
-
-    .button-default {
-      padding: 10px;
-      white-space: nowrap;
-    }
 
     .product-row {
       display: block;
@@ -125,13 +121,12 @@ const Admin = () => {
           categories.map(({ name: categoryName }) => (
             <TabPanel key={categoryName}>
               <div className="select-and-add">
-                <button
-                  className="button-default"
+                <DefaultButton
                   onClick={() => {
                     navigate(`/admin/add/${selectedCategory}`);
                   }}>
                   Добави нов
-                </button>
+                </DefaultButton>
               </div>
               {products &&
                 products.map(({ folder, name, images }) => (
@@ -151,13 +146,12 @@ const Admin = () => {
                           ))}
                       </div>
                       <div className="product-action">
-                        <button
-                          className="button-default"
+                        <DefaultButton
                           onClick={() => {
                             navigate(`/admin/edit/${selectedCategory}/${folder}`);
                           }}>
                           Редактирай
-                        </button>
+                        </DefaultButton>
                       </div>
                     </div>
                   </div>

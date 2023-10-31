@@ -1,7 +1,7 @@
 import React, { useReducer } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 
-import Upload from '../../components/upload';
+import { Upload, DefaultButton } from '../../components';
 import { useAddData } from '../../hooks/use-update-data';
 import { CATEGORIES_MAP } from '../../constants/data';
 import { addProductReducer } from './reducers';
@@ -48,9 +48,7 @@ const AddProduct = () => {
       <br />
       <h2>Нови снимки</h2>
       <Upload onUpload={(files) => dispatch({ type: IMAGES_CHANGE, payload: files })} />
-      <button className="button-default" onClick={handleSave}>
-        Запази промените
-      </button>
+      <DefaultButton onClick={handleSave}>Запази промените</DefaultButton>
     </div>
   );
 };

@@ -33,24 +33,6 @@ a:hover {
   text-shadow: 0px 0px 10px ${(props) => props.theme.colors.accent};
 }
 
-.button-default {
-  border: 0px;
-  border-radius: 3px;
-  font-size: 1em;
-  font-weight: bold;
-  font-family: azbuki;
-  background-color: ${(props) => props.theme.colors.accent};
-  color: ${(props) => props.theme.colors.second};
-  padding: 15px 40px;
-  cursor: pointer;
-
-  &:disabled {
-    background-color: grey;
-    opacity: 0.5;
-    cursor: auto;
-  }
-}
-
 .button-danger {
   border: 0px;
   border-radius: 3px;
