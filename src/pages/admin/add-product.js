@@ -1,6 +1,7 @@
 import React, { useReducer } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 
+import { EditContainer } from './edit-container';
 import { Upload, DefaultButton } from '../../components';
 import { useAddData } from '../../hooks/use-update-data';
 import { CATEGORIES_MAP } from '../../constants/data';
@@ -29,7 +30,7 @@ const AddProduct = () => {
   };
 
   return (
-    <div className="edit-container">
+    <EditContainer>
       <h1>Добавяне в категория: {CATEGORIES_MAP[category]}</h1>
       <h2>Заглавие</h2>
       <input
@@ -49,7 +50,7 @@ const AddProduct = () => {
       <h2>Нови снимки</h2>
       <Upload onUpload={(files) => dispatch({ type: IMAGES_CHANGE, payload: files })} />
       <DefaultButton onClick={handleSave}>Запази промените</DefaultButton>
-    </div>
+    </EditContainer>
   );
 };
 
