@@ -6,8 +6,7 @@ import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 
 import { imageHref } from '../../selectors/image';
-import { useCategories } from '../../hooks/use-categories';
-import { useProducts } from '../../hooks/use-products';
+import { useCategories, useProducts } from '../../hooks';
 import { DefaultButton } from '../../components';
 
 const AdminContainer = styled.div`

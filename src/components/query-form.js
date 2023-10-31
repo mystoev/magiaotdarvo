@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 
-import { useSendEmail } from '../hooks/use-send-email';
+import { useSendEmail } from '../hooks';
 import { DefaultButton } from '.';
 
 const QueryFormDefault = styled.div`

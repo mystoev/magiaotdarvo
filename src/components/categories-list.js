@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { useCategories } from '../hooks/use-categories';
+import { useCategories } from '../hooks';
 import { CategoryThumbnail, Section } from '.';
 
 const CategoriesListStyled = styled.div`

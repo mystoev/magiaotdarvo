@@ -3,7 +3,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 
 import { EditContainer } from './edit-container';
 import { Upload, DefaultButton } from '../../components';
-import { useAddData } from '../../hooks/use-update-data';
+import { useAddData } from '../../hooks';
 import { CATEGORIES_MAP } from '../../constants/data';
 import { addProductReducer } from './reducers';
 import { NAME_CHANGE, DESCRIPTION_CHANGE, IMAGES_CHANGE } from './constants';

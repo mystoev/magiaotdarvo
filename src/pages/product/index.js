@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 
 import styled from 'styled-components';
 
-import { useProduct } from '../../hooks/use-product';
+import { useProduct } from '../../hooks';
 import { PageHeader } from '../../components';
 import { CATEGORIES_MAP, WEBSITE } from '../../constants/data';
 import { selectCarouselImages } from '../../selectors/image';

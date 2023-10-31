@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 
-import { useProducts } from '../../hooks/use-products';
+import { useProducts } from '../../hooks';
 import { CATEGORIES_MAP } from '../../constants/data';
 import { PageHeader } from '../../components';
 import { Thumbnail } from './thumbnail';

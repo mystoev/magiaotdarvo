@@ -1,7 +1,7 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
 
-import { useScrollTop } from '../hooks/use-scroll-top';
+import { useScrollTop } from '../hooks';
 import CookieConsent from 'react-cookie-consent';
 import { Header, Footer } from '../components';
 import { Styles } from './styles';

@@ -4,8 +4,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 import { EditContainer } from './edit-container';
 import { Upload, DefaultButton } from '../../components';
 import SelectableImage from '../../components/selectable-image';
-import { useProduct } from '../../hooks/use-product';
-import { useUpdateData, useUploadImages } from '../../hooks/use-update-data';
+import { useProduct, useUpdateData, useUploadImages } from '../../hooks';
 import { editProductReducer } from './reducers';
 import {
   NAME_CHANGE,
