@@ -11,3 +11,5 @@ export { default as HeaderMenu } from './header-menu';
 export { default as Section } from './section';
 export { default as DefaultButton } from './button-default';
 export { default as Upload } from './upload';
+export { default as SocialLink } from './social-link';
+export { default as Copyright } from './copyright';

@@ -1,102 +1,61 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { HashLink } from 'react-router-hash-link';
 import styled from 'styled-components';
 
-import { AccentBar } from '.';
+import { AccentBar, Copyright, SocialLink } from '.';
 import { FacebookIcon, InstagramIcon } from '../../public/images';
 
 const FooterContainer = styled.div`
   margin-top: auto;
 
-  .footer {
-    padding: 20px 0px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    justify-content: space-evenly;
-    background-color: ${(props) => props.theme.colors.second};
-  }
-
-  .footer-section {
-    display: flex;
+  @media only screen and (max-width: 768px) {
     flex-direction: column;
-    gap: 5px;
+    gap: 30px;
+  }
+`;
 
-    h3 {
-      color: ${(props) => props.theme.colors.main};
-      margin-bottom: 10px;
-      text-decoration: underline;
-    }
+const FooterStyled = styled.div`
+  padding: 20px 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  justify-content: space-evenly;
+  background-color: ${(props) => props.theme.colors.second};
+`;
 
-    p,
-    a {
-      color: ${(props) => props.theme.colors.main};
+const FooterSection = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 
-      span {
-        font-family: Verdana;
-        font-size: 0.8em;
-      }
-    }
-
-    .social-link {
-      display: flex;
-      align-items: center;
-      gap: 5px;
-    }
-
-    .social-link span {
-      font-size: 0.8em;
-    }
-
-    .social-icon {
-      width: 24px;
-      height: 24px;
-    }
+  h3 {
+    color: ${(props) => props.theme.colors.main};
+    margin-bottom: 10px;
+    text-decoration: underline;
   }
 
-  .copyright {
-    display: block;
-    font-size: 0.6em;
-    line-height: 1.4em;
-    text-align: center;
+  p,
+  a {
+    color: ${(props) => props.theme.colors.main};
 
     span {
       font-family: Verdana;
+      font-size: 0.8em;
     }
   }
 
   @media only screen and (max-width: 768px) {
-    flex-direction: column;
-    gap: 30px;
-
-    .footer-section {
-      align-items: center;
-      text-align: center;
-    }
+    align-items: center;
+    text-align: center;
   }
 `;
-
-const SocialLink = ({ Img, link, children }) => (
-  <a className="social-link" href={link} target="_blank" rel="noreferrer">
-    {Img && <img className="social-icon" src={Img} />}
-    <span>{children}</span>
-  </a>
-);
-
-SocialLink.propTypes = {
-  Img: PropTypes.node.isRequired,
-  link: PropTypes.string,
-  children: PropTypes.node
-};
 
 const Footer = () => (
   <FooterContainer>
     <AccentBar />
-    <div className="footer">
-      <div className="footer-section">
+    <FooterStyled>
+      <FooterSection>
         <h3>Контакти</h3>
-
         <p>
           Телефон: <span>0890932001</span>
         </p>
@@ -104,13 +63,13 @@ const Footer = () => (
           Адрес: <span>5177, с. Сушица</span>
         </p>
         <p>
-          Имейл:{' '}
+          Имейл:
           <span>
-            <a href="mailto:magiaotdarvo@gmail.com">magiaotdarvo@gmail.com</a>
+            <a href="mailto:magiaotdarvo@gmail.com">{' magiaotdarvo@gmail.com'}</a>
           </span>
         </p>
-      </div>
-      <div className="footer-section">
+      </FooterSection>
+      <FooterSection>
         <h3>Социални мрежи</h3>
         <SocialLink
           Img={FacebookIcon}
@@ -120,17 +79,15 @@ const Footer = () => (
         <SocialLink Img={InstagramIcon} link="https://www.instagram.com/magiaotdarvo/">
           Instagram
         </SocialLink>
-      </div>
-      <div className="footer-section">
+      </FooterSection>
+      <FooterSection>
         <h3>ЧЗВ</h3>
         <HashLink to="/query#faq1">Как да поръчам?</HashLink>
         <HashLink to="/query#faq2">Колко време отнема изработката?</HashLink>
         <HashLink to="/query#faq3">Искате да поръчате вече изработен продукт?</HashLink>
-      </div>
-    </div>
-    <div className="copyright">
-      <span>©</span> 2022 Магия от дърво. Всички права запазени.
-    </div>
+      </FooterSection>
+    </FooterStyled>
+    <Copyright />
   </FooterContainer>
 );
 
