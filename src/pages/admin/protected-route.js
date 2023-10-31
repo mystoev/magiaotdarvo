@@ -1,6 +1,7 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
 
+import { Styles } from '../styles';
 import { PageHeader } from '../../components';
 import Login from './login';
 import { useToken } from '../../hooks/use-login';
@@ -10,6 +11,7 @@ const ProtectedRoute = () => {
 
   return token ? (
     <>
+      <Styles />
       <PageHeader title={'Админ портал'} linkTo={'/admin'} />
       <Outlet />
     </>

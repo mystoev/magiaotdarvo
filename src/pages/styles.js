@@ -30,7 +30,7 @@ a {
 }
 
 a:hover {
-  text-shadow: 0px 0px 10px ${(props) => props.theme.colors.secondaryAccent};
+  text-shadow: 0px 0px 10px ${(props) => props.theme.colors.accent};
 }
 
 .button-default {
@@ -39,7 +39,7 @@ a:hover {
   font-size: 1em;
   font-weight: bold;
   font-family: azbuki;
-  background-color: ${(props) => props.theme.colors.secondaryAccent};
+  background-color: ${(props) => props.theme.colors.accent};
   color: ${(props) => props.theme.colors.second};
   padding: 15px 40px;
   cursor: pointer;
@@ -70,7 +70,7 @@ a:hover {
 }
 
 svg {
-  filter: drop-shadow(0px 0px 5px ${(props) => props.theme.colors.secondaryAccent});
+  filter: drop-shadow(0px 0px 5px ${(props) => props.theme.colors.accent});
 }
 
 fieldset {
@@ -96,7 +96,7 @@ textarea {
   box-shadow: 0px 0px 2px ${(props) => props.theme.colors.second};
 
   &:focus-visible {
-    outline: 2px solid ${(props) => props.theme.colors.secondaryAccent} !important;
+    outline: 2px solid ${(props) => props.theme.colors.accent} !important;
   }
 }
 
