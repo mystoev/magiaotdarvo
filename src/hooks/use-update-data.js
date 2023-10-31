@@ -29,6 +29,7 @@ export const useAddData = async ({ category, newProductName, description, images
   const payload = {
     key: token,
     category,
+    folder: `${+new Date()}`,
     newProductName,
     description,
     images

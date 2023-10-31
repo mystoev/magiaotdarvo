@@ -15,7 +15,6 @@ function update()
       return false;
     }
 
-    // update_product($payload);
     writeNewImages($payload, $payload['productName']);
 
     return true;
