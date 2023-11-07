@@ -30,6 +30,17 @@ describe('<Footer />', () => {
         height: 3px;
       }
 
+      .c6 {
+        display: block;
+        font-size: 0.6em;
+        line-height: 1.4em;
+        text-align: center;
+      }
+
+      .c6 span {
+        font-family: Verdana;
+      }
+
       .c5 {
         display: flex;
         align-items: center;
@@ -43,17 +54,6 @@ describe('<Footer />', () => {
       .c5 >img {
         width: 24px;
         height: 24px;
-      }
-
-      .c6 {
-        display: block;
-        font-size: 0.6em;
-        line-height: 1.4em;
-        text-align: center;
-      }
-
-      .c6 span {
-        font-family: Verdana;
       }
 
       .c0 {
