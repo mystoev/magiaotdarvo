@@ -43,7 +43,6 @@ function add()
     return;
   }
 
-  $folder = createFolders($payload['category'], $payload['folder']);
   writeNewImages($payload, $folder);
   createCoverImage($payload, $folder);
   insert_product($folder, $payload);
