@@ -1,6 +1,6 @@
 import React from 'react';
 import { fireEvent, waitFor } from '@testing-library/react';
-import { renderWithTheme } from '../../test/utils';
+import { renderWithTheme } from '../../../test/utils';
 
 import Upload from './upload';
 

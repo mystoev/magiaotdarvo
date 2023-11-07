@@ -7,3 +7,4 @@ export { EditContainer } from './edit-container';
 export { AdminContainer } from './admin-container';
 export { selectProducts } from './selectors';
 export { addProductReducer, editProductReducer } from './reducers';
+export { default as Upload } from './upload';

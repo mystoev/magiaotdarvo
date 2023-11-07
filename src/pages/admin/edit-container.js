@@ -5,6 +5,10 @@ export const EditContainer = styled.div`
   margin: auto;
   padding-bottom: 50px;
 
+  .images-container {
+    margin-bottom: 20px;
+  }
+
   @media only screen and (max-width: 768px) {
     font-size: 0.75em;
     width: 100%;

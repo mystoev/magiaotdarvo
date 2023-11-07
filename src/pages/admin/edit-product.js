@@ -1,15 +1,15 @@
 import React, { useEffect, useReducer } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 
-import { EditContainer, editProductReducer } from '.';
-import { Upload, DefaultButton } from '../../components';
+import { EditContainer, Upload, editProductReducer } from '.';
+import { DefaultButton } from '../../components';
 import SelectableImage from '../../components/selectable-image';
 import { useProduct, useUpdateData, useUploadImages } from '../../hooks';
 import {
-  NAME_CHANGE,
   DESCRIPTION_CHANGE,
-  NEW_FILE_CHANGE,
   IMAGES_TO_DELETE_CHANGE,
+  NAME_CHANGE,
+  NEW_FILE_CHANGE,
   PRODUCT_LOADED
 } from './constants';
 
@@ -53,7 +53,6 @@ const EditProduct = () => {
 
   return (
     <EditContainer>
-      <h1>Редактиране</h1>
       <h2>Заглавие</h2>
       <input
         type="text"
@@ -68,7 +67,7 @@ const EditProduct = () => {
         }>
         {state.description}
       </textarea>
-      <h2>Текущи снимки</h2>
+      <h2>Снимки</h2>
       <div className="images-container">
         {state.files
           .split(',')
@@ -76,6 +75,7 @@ const EditProduct = () => {
           .map((file) => (
             <SelectableImage
               key={file}
+              file={file}
               category={category}
               productName={product?.folder}
               onSelect={({ file, isSelected }) => {
@@ -87,22 +87,27 @@ const EditProduct = () => {
                   }
                 });
               }}
-              file={file}
             />
           ))}
+        {state.newFiles.map(({ name }) => (
+          <SelectableImage
+            key={name}
+            file={name}
+            category={category}
+            productName={product?.folder}
+          />
+        ))}
+        <Upload
+          onUpload={async (files) => {
+            dispatch({ type: NEW_FILE_CHANGE, payload: files });
+            await useUploadImages({
+              category,
+              productName,
+              images: files
+            });
+          }}
+        />
       </div>
-      <br />
-      <h2>Нови снимки</h2>
-      <Upload
-        onUpload={async (files) => {
-          dispatch({ type: NEW_FILE_CHANGE, payload: files });
-          await useUploadImages({
-            category,
-            productName,
-            images: files
-          });
-        }}
-      />
       <DefaultButton onClick={handleSave}>Запази промените</DefaultButton>
     </EditContainer>
   );

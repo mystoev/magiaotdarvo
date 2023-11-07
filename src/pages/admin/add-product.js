@@ -1,8 +1,8 @@
 import React, { useReducer } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 
-import { EditContainer, addProductReducer } from '.';
-import { Upload, DefaultButton } from '../../components';
+import { Upload, EditContainer, addProductReducer } from '.';
+import { DefaultButton } from '../../components';
 import { useAddData } from '../../hooks';
 import { CATEGORIES_MAP } from '../../constants';
 import { NAME_CHANGE, DESCRIPTION_CHANGE, IMAGES_CHANGE } from './constants';
