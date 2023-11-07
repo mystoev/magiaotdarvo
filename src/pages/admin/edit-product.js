@@ -98,12 +98,12 @@ const EditProduct = () => {
         ))}
         <Upload
           onUpload={async (files) => {
-            dispatch({ type: NEW_FILE_CHANGE, payload: files });
             await useUploadImages({
               category,
               productName,
               images: files
             });
+            dispatch({ type: NEW_FILE_CHANGE, payload: files });
           }}
         />
       </div>

@@ -59,12 +59,12 @@ const AddProduct = () => {
         ))}
         <Upload
           onUpload={async (files) => {
-            dispatch({ type: IMAGES_CHANGE, payload: files });
             await useUploadImages({
               category,
               productName: folder,
               images: files
             });
+            dispatch({ type: IMAGES_CHANGE, payload: files });
           }}
         />
       </div>
