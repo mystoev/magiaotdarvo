@@ -2,8 +2,7 @@ import React, { useEffect, useReducer } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 
 import { EditContainer, Upload, editProductReducer } from '.';
-import { DefaultButton } from '../../components';
-import SelectableImage from '../../components/selectable-image';
+import { DefaultButton, SelectableImage } from '../../components';
 import { useProduct, useUpdateData, useUploadImages } from '../../hooks';
 import {
   DESCRIPTION_CHANGE,

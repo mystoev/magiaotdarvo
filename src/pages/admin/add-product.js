@@ -1,11 +1,13 @@
-import React, { useReducer } from 'react';
+import React, { useEffect, useReducer } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 
-import { Upload, EditContainer, addProductReducer } from '.';
-import { DefaultButton } from '../../components';
-import { useAddData } from '../../hooks';
+import { EditContainer, Upload, addProductReducer } from '.';
+import { DefaultButton, SelectableImage } from '../../components';
 import { CATEGORIES_MAP } from '../../constants';
-import { NAME_CHANGE, DESCRIPTION_CHANGE, IMAGES_CHANGE } from './constants';
+import { useAddData, useUploadImages } from '../../hooks';
+import { DESCRIPTION_CHANGE, IMAGES_CHANGE, NAME_CHANGE } from './constants';
+
+let folder;
 
 const AddProduct = () => {
   const navigate = useNavigate();
@@ -17,12 +19,17 @@ const AddProduct = () => {
     images: []
   });
 
+  useEffect(() => {
+    folder = `${+new Date()}`;
+  }, []);
+
   const handleSave = async () => {
     await useAddData({
       category,
       newProductName: state.name,
       description: state.description,
-      images: state.images
+      images: state.images,
+      folder
     });
 
     navigate('/admin');
@@ -45,9 +52,22 @@ const AddProduct = () => {
         }>
         {state.description}
       </textarea>
-      <br />
-      <h2>Нови снимки</h2>
-      <Upload onUpload={(files) => dispatch({ type: IMAGES_CHANGE, payload: files })} />
+      <h2>Снимки</h2>
+      <div className="images-container">
+        {state.images.map(({ name }) => (
+          <SelectableImage key={name} file={name} category={category} productName={folder} />
+        ))}
+        <Upload
+          onUpload={async (files) => {
+            dispatch({ type: IMAGES_CHANGE, payload: files });
+            await useUploadImages({
+              category,
+              productName: folder,
+              images: files
+            });
+          }}
+        />
+      </div>
       <DefaultButton onClick={handleSave}>Запази промените</DefaultButton>
     </EditContainer>
   );

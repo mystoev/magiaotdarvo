@@ -11,4 +11,5 @@ export { default as ImageSection } from './image-section';
 export { default as PageHeader } from './page-header';
 export { default as QueryForm } from './query-form';
 export { default as Section } from './section';
+export { default as SelectableImage } from './selectable-image';
 export { default as SocialLink } from './social-link';

@@ -1,5 +1,5 @@
-import { UPDATE_FILE, ADD_FILE, UPLOAD_FILE, IS_PROD, LOCAL_SERVER } from '../constants';
 import axios from 'axios';
+import { ADD_FILE, IS_PROD, LOCAL_SERVER, UPDATE_FILE, UPLOAD_FILE } from '../constants';
 import { selectToken } from '../selectors/token';
 
 export const useUpdateData = async ({
@@ -24,12 +24,12 @@ export const useUpdateData = async ({
   return data;
 };
 
-export const useAddData = async ({ category, newProductName, description, images }) => {
+export const useAddData = async ({ category, newProductName, description, images, folder }) => {
   const token = selectToken();
   const payload = {
     key: token,
     category,
-    folder: `${+new Date()}`,
+    folder,
     newProductName,
     description,
     images

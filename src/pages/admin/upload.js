@@ -60,7 +60,7 @@ const Upload = ({ onUpload }) => {
       <img src={New} />
       <input
         data-testid="file-input"
-        title="Добави нова снимка"
+        title="Добави снимка"
         type="file"
         multiple
         onChange={handleChange}

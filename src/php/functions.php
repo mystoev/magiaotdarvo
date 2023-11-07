@@ -13,7 +13,20 @@ function writeNewImages($payload, $folder)
     return;
   }
 
-  $folder = 'images/' . $payload['category'] . "/" . $folder;
+  if (!file_exists('images')) {
+    mkdir('images', 0755);
+  }
+
+  $categoryFolder = 'images/' . $payload['category'];
+  if (!file_exists($categoryFolder)) {
+    mkdir($categoryFolder, 0755);
+  }
+
+  $folder = $categoryFolder . "/" . $folder;
+  if (!file_exists($folder)) {
+    mkdir($folder, 0755);
+  }
+
   foreach ($images as $image) {
     $img = $image["data"];
     $img = str_replace('data:image/png;base64,', '', $img);
