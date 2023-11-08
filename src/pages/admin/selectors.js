@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Thumbnail } from '../category/thumbnail';
 
-export const selectProducts = (data, selectedCategory) => {
+export const selectThumbnails = (data, selectedCategory) => {
   if (!data) {
     return [];
   }

@@ -1,10 +1,10 @@
-export { default as ProtectedRoute } from './protected-route';
-export { default as Login } from './login';
-export { default as Admin } from './admin';
-export { default as EditProduct } from './edit-product';
 export { default as AddProduct } from './add-product';
-export { EditContainer } from './edit-container';
+export { default as Admin } from './admin';
 export { AdminContainer } from './admin-container';
-export { selectProducts } from './selectors';
+export { EditContainer } from './edit-container';
+export { default as EditProduct } from './edit-product';
+export { default as Login } from './login';
+export { default as ProtectedRoute } from './protected-route';
 export { addProductReducer, editProductReducer } from './reducers';
+export { selectThumbnails } from './selectors';
 export { default as Upload } from './upload';

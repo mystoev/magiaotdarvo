@@ -1,8 +1,8 @@
-import { selectProducts } from './selectors';
+import { selectThumbnails } from './selectors';
 
 describe('products selectors', () => {
   it('should be empty without data', () => {
-    const result = selectProducts(null, null);
+    const result = selectThumbnails(null, null);
 
     expect(result).toEqual([]);
   });
@@ -15,7 +15,7 @@ describe('products selectors', () => {
       { other: 'no-to-render' }
     ];
 
-    const result = selectProducts(data, category);
+    const result = selectThumbnails(data, category);
     expect(result).toHaveLength(data.length + 1);
     expect(result).toMatchInlineSnapshot(`
       [

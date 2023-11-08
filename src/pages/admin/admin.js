@@ -1,16 +1,18 @@
 import React, { useEffect, useState } from 'react';
 
-import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+import { Tab, TabList, TabPanel, Tabs } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 
-import { AdminContainer, selectProducts } from '.';
+import { AdminContainer, selectThumbnails } from '.';
 import { useCategories, useProducts } from '../../hooks';
 import { ProductsList } from '../category/products-list';
 
 const Admin = () => {
   const { data: categories } = useCategories();
   const [selectedCategory, setSelectedCategory] = useState(categories?.[0].name);
-  const { data } = useProducts({ categoryName: selectedCategory });
+  const { data: products } = useProducts({ categoryName: selectedCategory });
+
+  const thumbnails = selectThumbnails(products, selectedCategory);
 
   useEffect(() => {
     if (!categories) {
@@ -19,8 +21,6 @@ const Admin = () => {
 
     setSelectedCategory(categories[0].name);
   }, [categories]);
-
-  const products = selectProducts(data, selectedCategory);
 
   return (
     <AdminContainer>
@@ -39,7 +39,7 @@ const Admin = () => {
 
           {categories.map(({ name }) => (
             <TabPanel key={name}>
-              <ProductsList>{products}</ProductsList>
+              <ProductsList>{thumbnails}</ProductsList>
             </TabPanel>
           ))}
         </Tabs>
