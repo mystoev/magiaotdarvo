@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 import { New } from '../../../public/images';
 
-const FileUpload = styled.div`
+const UploadContainer = styled.div`
   display: inline-block;
   background: #ffffff;
   position: relative;
@@ -56,7 +56,7 @@ const Upload = ({ onUpload }) => {
   };
 
   return (
-    <FileUpload>
+    <UploadContainer>
       <img src={New} />
       <input
         data-testid="file-input"
@@ -65,7 +65,7 @@ const Upload = ({ onUpload }) => {
         multiple
         onChange={handleChange}
       />
-    </FileUpload>
+    </UploadContainer>
   );
 };
 
