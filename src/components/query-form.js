@@ -1,11 +1,11 @@
 import _ from 'lodash';
-import React, { useState } from 'react';
 import PropTypes from 'prop-types';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 
-import { useSendEmail } from '../hooks';
 import { DefaultButton } from '.';
+import { useSendEmail } from '../hooks';
 
 const QueryFormDefault = styled.div`
   margin: 50px 0px;
@@ -44,7 +44,7 @@ const QueryFormContent = ({ slim, productLink = null }) => {
   });
 
   const navigate = useNavigate();
-  const { mutate } = useSendEmail({
+  const { isLoading, mutate } = useSendEmail({
     onSuccess: () => {
       navigate('/email-sent');
     }
@@ -98,7 +98,8 @@ const QueryFormContent = ({ slim, productLink = null }) => {
           _.isEmpty('state.name') ||
           _.isEmpty(state.email) ||
           _.isEmpty(state.phone) ||
-          _.isEmpty(state.message)
+          _.isEmpty(state.message) ||
+          isLoading
         }>
         Изпрати
       </DefaultButton>

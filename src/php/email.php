@@ -4,7 +4,7 @@ $request_body = file_get_contents('php://input');
 $data = json_decode($request_body, true);
 
 $env = parse_ini_file('.env');
-if ($data["key"] !== $env['TOKEN']) {
+if ($data["key"] !== 'email-token') {
   return;
 }
 
