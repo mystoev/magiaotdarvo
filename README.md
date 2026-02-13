@@ -19,15 +19,28 @@ mysql <repo>/scripts/categories.sql
 mysql <repo>/scripts/products.sql
 ```
 
+## .env.local
+```
+SERVER=localhost
+USERNAME=root
+PASSWORD=
+DATABASE=magiaotdarvo
+# Optional - for administrative section
+TOKEN=""
+ADMIN_USERNAME=""
+ADMIN_PASSWORD=""
+
+```
+
 ## How to Use
 
 ```
-npm i
+npm install
 npm run php
 npm run dev
 ```
 
-# Image guideliness
+# Image modification guideliness
 
 ## To update cover images
 
