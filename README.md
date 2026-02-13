@@ -1,10 +1,33 @@
-# МАГИЯ ОТ ДЪРВО
+# Official magiaotdarvo.com website
 
-## Авторски дърворезби и еко изделия от Диди Георгиева
+## Author's woodcarvings and eco-products by Didi Georgieva 
 
 [magiaotdarvo.com](https://magiaotdarvo.com/)
 
-# Features
+# Getting Started
+
+## Requirements
+- PHP v8.5.1
+- Node.js v20.19.6
+- MySQL instance
+
+## Setup
+```
+npm run generate:data
+npm run generate:sql
+mysql <repo>/scripts/categories.sql
+mysql <repo>/scripts/products.sql
+```
+
+## How to Use
+
+```
+npm i
+npm run php
+npm run dev
+```
+
+# Image guideliness
 
 ## To update cover images
 
